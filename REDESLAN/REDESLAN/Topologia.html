@@ -51,7 +51,8 @@
   <!-- Icon Font Stylesheet -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Libraries Stylesheet -->
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -63,6 +64,8 @@
   <link href="css/style.css" rel="stylesheet">
 
 
+  <!-- Template Stylesheet -->
+  <link href="./css/topologia.css" rel="stylesheet">
 
 </head>
 
@@ -152,20 +155,6 @@
       </div>
 
       </div>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="#about" class="dropdown-item">Internet</a>
-          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
-          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
-          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
-          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
-          <a href="#contact" class="dropdown-item">Backbone</a>
-        </div>
-      </div>
-
-      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
-
     </div>
     <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
   </div>
@@ -191,40 +180,183 @@
           costo. Algunas de las topologías más comunes son la topología en estrella, en bus, en anillo y en malla, cada
           una con sus propias ventajas y desventajas</p>
       </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
             <video width="100%" controls autoplay muted>
-              <source src="img/La Mejor explicación de TOPOLOGÍA DE REDES informaticas.mp4"
-                type="video/mp4">
+              <source src="img/La Mejor explicación de TOPOLOGÍA DE REDES informaticas.mp4" type="video/mp4">
             </video>
           </div>
           <div class="col-lg-8 content">
             <h2>Tipos de Topologías.</h2>
             <p class="fst-italic py-3">
               En una red LAN, las topologías determinan cómo se conectan los dispositivos. Existen varios tipos de
-              topologías comunes:</p>
+              topologías comunes:
+            </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Arbol</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Hibrida</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Bus</strong></li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Arbol</span></strong>
+                    <div class="collapse" id="treeInfo">
+                      <p>La topología en árbol combina características de las topologías estrella y bus. Es utilizada para organizar redes en jerarquías.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#treeVideoModal">Ver video</button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Hibrida</span></strong>
+                    <div class="collapse" id="hybridInfo">
+                      <p>Una topología híbrida es una mezcla de dos o más topologías, permitiendo adaptarse a diversas necesidades.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hybridVideoModal">Ver video</button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Bus</span></strong>
+                    <div class="collapse" id="busInfo">
+                      <p>La topología bus es un modelo simple en el que todos los dispositivos están conectados a un único cable.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#busVideoModal">Ver video</button>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Estrella</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Anillo</strong></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Malla</strong></li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Estrella</span></strong>
+                    <div class="collapse" id="starInfo">
+                      <p>La topología estrella conecta todos los dispositivos a un punto central, como un hub o switch.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#starVideoModal">Ver video</button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Anillo</span></strong>
+                    <div class="collapse" id="ringInfo">
+                      <p>En la topología en anillo, cada dispositivo está conectado a dos dispositivos, formando un anillo cerrado.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ringVideoModal">Ver video</button>
+                    </div>
+                  </li>
+                  <li>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong><span class="toggle-text">Malla</span></strong>
+                    <div class="collapse" id="meshInfo">
+                      <p>La topología malla proporciona múltiples rutas de conexión entre dispositivos, lo que asegura alta disponibilidad y fiabilidad.</p>
+                      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meshVideoModal">Ver video</button>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
+    
+      <!-- Modales de Video -->
+      <!-- Modal Arbol Video -->
+      <div class="modal fade" id="treeVideoModal" tabindex="-1" aria-labelledby="treeVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="treeVideoModalLabel">Video de Topología Árbol</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_tree_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Hibrida Video -->
+      <div class="modal fade" id="hybridVideoModal" tabindex="-1" aria-labelledby="hybridVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="hybridVideoModalLabel">Video de Topología Hibrida</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_hybrid_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Bus Video -->
+      <div class="modal fade" id="busVideoModal" tabindex="-1" aria-labelledby="busVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="busVideoModalLabel">Video de Topología Bus</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_bus_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Estrella Video -->
+      <div class="modal fade" id="starVideoModal" tabindex="-1" aria-labelledby="starVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="starVideoModalLabel">Video de Topología Estrella</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_star_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Anillo Video -->
+      <div class="modal fade" id="ringVideoModal" tabindex="-1" aria-labelledby="ringVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ringVideoModalLabel">Video de Topología Anillo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_ring_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Modal Malla Video -->
+      <div class="modal fade" id="meshVideoModal" tabindex="-1" aria-labelledby="meshVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="meshVideoModalLabel">Video de Topología Malla</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls>
+                <source src="path_to_mesh_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section><!-- /About Section -->
 
@@ -526,17 +658,15 @@
 
 </section><!-- /Desventajas de las Topologías -->
 
-<!-- Cuestionario Interactivo -->
-<section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Cuestionario: Topologías de Redes LAN</h2>
-    <p>Responde correctamente las preguntas. Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
+<section id="quiz" class="quiz section light-background" style="background-color: rgb(255, 255, 255); padding: 50px 0;">
+  <div class="container section-title">
+    <h2 style="font-family: 'Arial', sans-serif; color: #333;">Cuestionario: Topologías de Redes LAN</h2>
+    <p style="color: #555;">Responde correctamente las preguntas para evaluar tus conocimientos sobre las topologías de redes LAN.</p>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container">
     <div id="quizContainer">
-      <!-- Pregunta 1 -->
+      <!-- Preguntas -->
       <div class="quiz-item" id="question1">
         <p><strong>1. ¿Cuál de las siguientes topologías es más económica y sencilla para redes pequeñas?</strong></p>
         <button class="quiz-option" data-correct="false">Malla</button>
@@ -544,7 +674,6 @@
         <button class="quiz-option" data-correct="false">Estrella</button>
       </div>
 
-      <!-- Pregunta 2 -->
       <div class="quiz-item" id="question2" style="display: none;">
         <p><strong>2. ¿Qué topología permite una alta redundancia y tolerancia a fallas?</strong></p>
         <button class="quiz-option" data-correct="false">Bus</button>
@@ -552,7 +681,6 @@
         <button class="quiz-option" data-correct="false">Estrella</button>
       </div>
 
-      <!-- Pregunta 3 -->
       <div class="quiz-item" id="question3" style="display: none;">
         <p><strong>3. ¿Cuál es la desventaja principal de la topología estrella?</strong></p>
         <button class="quiz-option" data-correct="false">Es difícil de instalar</button>
@@ -560,11 +688,45 @@
         <button class="quiz-option" data-correct="false">No es escalable</button>
       </div>
 
+      <div class="quiz-item" id="question4" style="display: none;">
+        <p><strong>4. ¿Qué topología es ideal para redes grandes con muchas conexiones?</strong></p>
+        <button class="quiz-option" data-correct="true">Estrella</button>
+        <button class="quiz-option" data-correct="false">Bus</button>
+        <button class="quiz-option" data-correct="false">Anillo</button>
+      </div>
+
+      <div class="quiz-item" id="question5" style="display: none;">
+        <p><strong>5. ¿En qué topología los nodos están directamente conectados entre sí?</strong></p>
+        <button class="quiz-option" data-correct="false">Estrella</button>
+        <button class="quiz-option" data-correct="true">Malla</button>
+        <button class="quiz-option" data-correct="false">Bus</button>
+      </div>
+
+      <div class="quiz-item" id="question6" style="display: none;">
+        <p><strong>6. ¿Cuál es la ventaja principal de la topología bus?</strong></p>
+        <button class="quiz-option" data-correct="true">Es económica y fácil de implementar</button>
+        <button class="quiz-option" data-correct="false">Alta tolerancia a fallos</button>
+        <button class="quiz-option" data-correct="false">Requiere cables especializados</button>
+      </div>
+
       <!-- Resultado Final -->
       <div id="finalResult" style="display: none; margin-top: 20px;">
-        <h3>¡Felicidades! Completaste el cuestionario.</h3>
-        <p>Tu calificación final es: <span id="score">0</span>/3.</p>
-        <button id="solutionButton" class="btn btn-primary">Ver Solucionario</button>
+        <h3 style="color: #28a745;">¡Felicidades! Completaste el cuestionario.</h3>
+        <p>Tu calificación final es: <span id="score">0</span>/6.</p>
+        <button id="solutionButton" class="btn btn-info">Ver Solucionario</button>
+        <button id="resetButton" class="btn btn-warning" style="margin-top: 10px;">Reiniciar Cuestionario</button>
+      </div>
+
+      <div id="solutionSection" style="display: none; margin-top: 20px; background: #f8f9fa; padding: 20px; border-radius: 5px;">
+        <h4>Solucionario:</h4>
+        <ul>
+          <li><strong>Pregunta 1:</strong> Bus</li>
+          <li><strong>Pregunta 2:</strong> Malla</li>
+          <li><strong>Pregunta 3:</strong> Depende del nodo central</li>
+          <li><strong>Pregunta 4:</strong> Estrella</li>
+          <li><strong>Pregunta 5:</strong> Malla</li>
+          <li><strong>Pregunta 6:</strong> Es económica y fácil de implementar</li>
+        </ul>
       </div>
 
       <!-- Controles -->
@@ -575,104 +737,70 @@
     </div>
   </div>
 </section>
-
 <script>
-  let score = 0; // Puntuación inicial
-  let currentQuestionIndex = 0; // Índice de la pregunta actual
+  let currentQuestion = 0;
   const questions = document.querySelectorAll('.quiz-item');
-  const options = document.querySelectorAll('.quiz-option');
-  const prevButton = document.getElementById('prevButton');
+  const scoreElement = document.getElementById('score');
   const nextButton = document.getElementById('nextButton');
-  const finalResult = document.getElementById('finalResult');
+  const prevButton = document.getElementById('prevButton');
+  const resetButton = document.getElementById('resetButton');
   const solutionButton = document.getElementById('solutionButton');
+  const solutionSection = document.getElementById('solutionSection');
+  let score = 0;
 
   function showQuestion(index) {
-    // Ocultar todas las preguntas
-    questions.forEach(question => question.style.display = 'none');
-    // Mostrar la pregunta actual
-    questions[index].style.display = 'block';
-    // Actualizar visibilidad de los botones de navegación
-    prevButton.style.display = index > 0 ? 'inline-block' : 'none';
-    nextButton.style.display = index < questions.length - 1 ? 'inline-block' : 'none';
-    if (index === questions.length - 1) {
-      nextButton.textContent = 'Finalizar';
-    } else {
-      nextButton.textContent = 'Siguiente';
-    }
+    questions.forEach((q, i) => {
+      q.style.display = i === index ? 'block' : 'none';
+    });
+
+    prevButton.style.display = index === 0 ? 'none' : 'inline-block';
+    nextButton.textContent = index === questions.length - 1 ? 'Ver Resultado' : 'Siguiente';
   }
 
-  options.forEach(option => {
-    option.addEventListener('click', function () {
-      if (this.disabled) return;  // Evitar clic si la opción ya está deshabilitada
+  nextButton.addEventListener('click', () => {
+    if (currentQuestion === questions.length - 1) {
+      document.getElementById('finalResult').style.display = 'block';
+      solutionSection.style.display = 'none';
+      scoreElement.textContent = score;
+      nextButton.style.display = 'none';
+      prevButton.style.display = 'none';
+    } else {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    }
+  });
 
-      const isCorrect = this.dataset.correct === 'true';
-      const currentQuestion = this.closest('.quiz-item');
-      const allOptions = currentQuestion.querySelectorAll('.quiz-option');
+  prevButton.addEventListener('click', () => {
+    currentQuestion--;
+    showQuestion(currentQuestion);
+  });
 
-      // Si la pregunta ya ha sido respondida, no se pueden cambiar las respuestas
-      if (currentQuestion.dataset.answered) return;
+  resetButton.addEventListener('click', () => {
+    score = 0;
+    scoreElement.textContent = score;
+    currentQuestion = 0;
+    showQuestion(currentQuestion);
+    document.getElementById('finalResult').style.display = 'none';
+    solutionSection.style.display = 'none';
+    nextButton.style.display = 'inline-block';
+    prevButton.style.display = 'none';
+    document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+  });
 
-      // Marcar la pregunta como respondida
-      currentQuestion.dataset.answered = true;
-
-      // Sumar la puntuación si la respuesta es correcta
-      if (isCorrect) {
+  document.querySelectorAll('.quiz-option').forEach(option => {
+    option.addEventListener('click', (e) => {
+      e.target.classList.add('selected');
+      if (e.target.dataset.correct === 'true') {
         score++;
       }
-
-      // Deshabilitar todas las opciones después de la selección
-      allOptions.forEach(opt => opt.disabled = true);
-
-      // Mostrar la siguiente pregunta después de un breve delay
-      setTimeout(() => {
-        // Avanzar o mostrar el resultado
-        if (currentQuestionIndex < questions.length - 1) {
-          currentQuestionIndex++;
-          showQuestion(currentQuestionIndex);
-        } else {
-          finalResult.style.display = 'block';
-          document.getElementById('score').textContent = score;
-        }
-      }, 1000);
     });
   });
 
-  // Función para ir a la pregunta anterior
-  prevButton.addEventListener('click', () => {
-    currentQuestionIndex--;
-    // Desmarcar la respuesta seleccionada para permitir cambiarla
-    const previousQuestion = questions[currentQuestionIndex];
-    previousQuestion.dataset.answered = false;
-    const allOptions = previousQuestion.querySelectorAll('.quiz-option');
-    allOptions.forEach(opt => opt.disabled = false); // Habilitar las opciones para la nueva selección
-    showQuestion(currentQuestionIndex);
-  });
-
-  // Función para ir a la siguiente pregunta
-  nextButton.addEventListener('click', () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      currentQuestionIndex++;
-      showQuestion(currentQuestionIndex);
-    } else {
-      finalResult.style.display = 'block';
-      document.getElementById('score').textContent = score;
-    }
-  });
-
-  // Función para mostrar el solucionario
   solutionButton.addEventListener('click', () => {
-    const solucionario = `
-      <h4>Solucionario:</h4>
-      <p>1. La respuesta correcta es: Bus.</p>
-      <p>2. La respuesta correcta es: Malla.</p>
-      <p>3. La respuesta correcta es: Depende del nodo central.</p>
-    `;
-    finalResult.insertAdjacentHTML('beforeend', solucionario);
-    solutionButton.disabled = true;  // Deshabilitar el botón para no mostrarlo varias veces
+    solutionSection.style.display = 'block';
   });
 
-  // Iniciar mostrando la primera pregunta
-  showQuestion(currentQuestionIndex);
+  showQuestion(currentQuestion);
 </script>
 
 
@@ -701,7 +829,7 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-
+    <script src="js/index.js"></script>
 </body>
 
 </html>

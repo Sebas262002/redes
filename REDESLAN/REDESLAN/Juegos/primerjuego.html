@@ -5,123 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Juego de Subredes</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f8ff;
-      position: relative;
-    }
+/* Estilos personalizados */
+body {
+  background-color: #f4f4f4;
+}
 
-    /* Fondo de video */
-    video#background-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1; /* Coloca el video en el fondo */
-    }
+#intro-screen {
+  padding-top: 50px;
+}
 
-    .container {
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      max-width: 400px;
-      width: 100%;
-      z-index: 1;
-    }
+#game-screen {
+  padding-top: 50px;
+}
 
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
-    }
+canvas {
+  border: 2px solid #333;
+  background-color: #eaeaea;
+}
 
-    .btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: #007bff;
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    .question, .score, .feedback {
-      margin-top: 15px;
-    }
-
-    .choices {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .choice {
-      padding: 10px 15px;
-      background-color: #f1f1f1;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .choice:hover {
-      background-color: #d3d3d3;
-    }
-
-    .correct {
-      color: green;
-    }
-
-    .incorrect {
-      color: red;
-    }
-
-    .home-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #28a745;
-      color: #fff;
-      border-radius: 50%;
-      padding: 10px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .home-btn:hover {
-      background-color: #218838;
-    }
-
-    .navigation-btn {
-      background-color: #ffc107;
-    }
-
-    .navigation-btn:hover {
-      background-color: #e0a800;
-    }
-
-    .solution-btn {
-      background-color: #17a2b8;
-      display: none;
-    }
-
-    .solution-btn:hover {
-      background-color: #138496;
-    }
+.d-none {
+  display: none;
+}
 
   </style>
 </head>
@@ -133,147 +37,88 @@
     Tu navegador no soporta el video.
   </video>
 
-  <!-- Contenedor del juego -->
   <div class="container">
-    <button class="home-btn" onclick="goHome()">🏠</button>
-    <h1>Juego de Subredes</h1>
-    <div id="game">
-      <div id="intro">
-        <p>¿Puedes calcular la subred correcta para una IP dada?</p>
-        <button class="btn" onclick="startGame()">Comenzar</button>
-      </div>
-      <div id="question-section" style="display: none;">
-        <p id="question" class="question"></p>
-        <div id="choices" class="choices"></div>
-        <p id="feedback" class="feedback"></p>
-        <p id="score" class="score">Puntaje: 0</p>
-        <div>
-          <button class="btn navigation-btn" onclick="previousQuestion()">Atrás</button>
-          <button class="btn navigation-btn" onclick="nextQuestion()">Adelante</button>
-        </div>
-      </div>
-      <div id="end-section" style="display: none;">
-        <p>Puntaje final: <span id="final-score"></span></p>
-        <button class="btn solution-btn" onclick="showSolution()">Ver Solucionario</button>
-      </div>
+    <!-- Pantalla de inicio con contexto del juego -->
+    <div id="intro-screen" class="text-center">
+      <h1>¡Bienvenido a El Laberinto de Cables!</h1>
+      <p>En este juego, tu misión es conectar computadoras a través de cables en un laberinto sin que se pierdan las conexiones. ¡Cuidado con los obstáculos!</p>
+      <button id="start-button" class="btn btn-primary">Iniciar Juego</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="game-screen" class="text-center d-none">
+      <h2>Conecta los cables de manera correcta</h2>
+      <canvas id="game-canvas" width="500" height="500"></canvas>
     </div>
   </div>
 
+  <!-- Bootstrap JS, Popper y jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
   <script>
-    let score = 0;
-    let currentQuestion = 0;
-    const answers = [];
-    const questions = [
-      {
-        ip: "192.168.1.130",
-        mask: "255.255.255.0",
-        correctSubnets: ["192.168.1.0", "192.168.1.128", "192.168.1.192"],
-        correctAnswer: "192.168.1.128"
-      },
-      {
-        ip: "10.0.5.22",
-        mask: "255.255.255.240",
-        correctSubnets: ["10.0.5.0", "10.0.5.16", "10.0.5.32"],
-        correctAnswer: "10.0.5.16"
-      },
-      {
-        ip: "172.16.45.200",
-        mask: "255.255.255.192",
-        correctSubnets: ["172.16.45.0", "172.16.45.128", "172.16.45.192"],
-        correctAnswer: "172.16.45.192"
-      }
-    ];
+  // Obtener elementos
+const startButton = document.getElementById('start-button');
+const introScreen = document.getElementById('intro-screen');
+const gameScreen = document.getElementById('game-screen');
+const canvas = document.getElementById('game-canvas');
+const ctx = canvas.getContext('2d');
 
-    function startGame() {
-      document.getElementById("intro").style.display = "none";
-      document.getElementById("question-section").style.display = "block";
-      currentQuestion = 0;
-      score = 0;
-      displayQuestion();
+// Variables del juego
+let gameStarted = false;
+let playerX = 50, playerY = 50;
+let goalX = 450, goalY = 450;
+
+// Función para comenzar el juego
+startButton.addEventListener('click', () => {
+  introScreen.classList.add('d-none');
+  gameScreen.classList.remove('d-none');
+  startGame();
+});
+
+// Función para inicializar el juego
+function startGame() {
+  gameStarted = true;
+  playerX = 50;
+  playerY = 50;
+  drawGame();
+}
+
+// Función para dibujar el laberinto y al jugador
+function drawGame() {
+  if (gameStarted) {
+    // Limpiar el canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Dibujar el objetivo (meta)
+    ctx.fillStyle = 'green';
+    ctx.fillRect(goalX, goalY, 20, 20);
+
+    // Dibujar el jugador (computadora)
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(playerX, playerY, 20, 20);
+  }
+}
+
+// Función para mover al jugador con las teclas
+document.addEventListener('keydown', (e) => {
+  if (gameStarted) {
+    const moveAmount = 20;
+
+    if (e.key === 'ArrowUp' && playerY > 0) playerY -= moveAmount;
+    if (e.key === 'ArrowDown' && playerY < canvas.height - 20) playerY += moveAmount;
+    if (e.key === 'ArrowLeft' && playerX > 0) playerX -= moveAmount;
+    if (e.key === 'ArrowRight' && playerX < canvas.width - 20) playerX += moveAmount;
+
+    drawGame();
+
+    // Comprobar si el jugador ha llegado a la meta
+    if (playerX === goalX && playerY === goalY) {
+      alert('¡Has ganado! Conectaste las computadoras correctamente.');
+      gameStarted = false;
     }
-
-    function displayQuestion() {
-      let questionElement = document.getElementById("question");
-      let choicesElement = document.getElementById("choices");
-      let feedbackElement = document.getElementById("feedback");
-      let scoreElement = document.getElementById("score");
-
-      let questionData = questions[currentQuestion];
-      questionElement.innerHTML = `¿Cuál es la subred correcta para la IP <strong>${questionData.ip}</strong> con la máscara de subred <strong>${questionData.mask}</strong>?`;
-
-      // Limpiar feedback anterior
-      feedbackElement.innerHTML = '';
-
-      // Generar opciones
-      choicesElement.innerHTML = '';
-      questionData.correctSubnets.forEach(subnet => {
-        let choice = document.createElement("div");
-        choice.classList.add("choice");
-        choice.innerHTML = subnet;
-        choice.onclick = function() {
-          if (!answers[currentQuestion]) {
-            answers[currentQuestion] = subnet; // Guardar la respuesta
-            if (subnet === questionData.correctAnswer) {
-              score++;
-            }
-            updateFeedback(subnet === questionData.correctAnswer);
-          }
-        };
-        choicesElement.appendChild(choice);
-      });
-
-      scoreElement.innerHTML = `Puntaje: ${score}`;
-    }
-
-    function updateFeedback(isCorrect) {
-      let feedbackElement = document.getElementById("feedback");
-      if (isCorrect) {
-        feedbackElement.innerHTML = "<span class='correct'>¡Correcto!</span>";
-      } else {
-        feedbackElement.innerHTML = "<span class='incorrect'>Incorrecto</span>";
-      }
-    }
-
-    function nextQuestion() {
-      if (answers[currentQuestion]) {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
-          displayQuestion();
-        } else {
-          endGame();
-        }
-      } else {
-        alert("Por favor selecciona una respuesta antes de continuar.");
-      }
-    }
-
-    function previousQuestion() {
-      if (currentQuestion > 0) {
-        currentQuestion--;
-        displayQuestion();
-      }
-    }
-
-    function endGame() {
-      let finalScore = document.getElementById("final-score");
-      finalScore.innerHTML = score;
-      document.getElementById("question-section").style.display = "none";
-      document.getElementById("end-section").style.display = "block";
-      document.querySelector(".solution-btn").style.display = "inline-block"; // Muestra el botón de solucionario
-    }
-
-    function showSolution() {
-      let solutionText = "<h2>Solucionario</h2><ul>";
-      questions.forEach((question, index) => {
-        solutionText += `<li><strong>Pregunta ${index + 1}:</strong> La subred correcta es ${question.correctAnswer}</li>`;
-      });
-      solutionText += "</ul>";
-      document.getElementById("game").innerHTML = solutionText;
-    }
-
-    function goHome() {
-      window.location.href = '../indexContenido.html'; // Redirige a otro archivo HTML
-    }
+  }
+});
   </script>
 
 </body>

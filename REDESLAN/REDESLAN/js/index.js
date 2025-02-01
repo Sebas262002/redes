@@ -141,3 +141,28 @@ const questions = [
 document.getElementById('showVideoC').addEventListener('click', function() {
     document.getElementById('videoC').classList.remove('d-none');
   });
+
+
+
+//topologias
+document.addEventListener('DOMContentLoaded', function () {
+  const toggles = document.querySelectorAll('.toggle-text');  // Seleccionamos las palabras que activarán el colapso
+
+  toggles.forEach(function (toggle) {
+    toggle.addEventListener('click', function () {
+      // Buscar el siguiente contenedor .collapse dentro de este li
+      const collapseElement = this.closest('li').querySelector('.collapse');
+      
+      // Verificar si el contenido está colapsado o expandido
+      const isCollapsed = !collapseElement.classList.contains('show');
+
+      // Cambiar el estado de expansión del contenido
+      if (isCollapsed) {
+        collapseElement.classList.add('show');  // Expandir el contenido
+      } else {
+        collapseElement.classList.remove('show');  // Colapsar el contenido
+      }
+    });
+  });
+});
+
