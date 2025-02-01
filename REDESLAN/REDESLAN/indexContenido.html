@@ -28,7 +28,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -61,7 +60,8 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-
+   <!-- Cuuestionario 1  -->
+   <link href="css/questions.css" rel="stylesheet">
 
 
 </head>
@@ -194,41 +194,24 @@
         </div>
       </div>
 
-      </div>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="#about" class="dropdown-item">Internet</a>
-          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
-          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
-          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
-          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
-          <a href="#contact" class="dropdown-item">Backbone</a>
-        </div>
-      </div>
-
-      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
-
     </div>
     <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
   </div>
 </nav>
 <!-- Navbar End -->
 
-    <!-- About Section -->
-    <section id="about" class="about section">
+     <!-- About Section -->
+     <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>¿Qué es una Red LAN?</h2>
-        <p>Una Red de Área Local (LAN, por sus siglas en inglés) conecta dispositivos dentro de una misma área
-          geográfica, como una oficina, edificio o campus. Permite compartir recursos como archivos, impresoras y
-          acceso a Internet de manera eficiente y rápida.</p>
+        <p>Una Red de Área Local (LAN, por sus siglas en inglés) conecta dispositivos dentro de un área geográfica limitada, como una oficina, edificio o campus. Su objetivo es facilitar la comunicación y el intercambio de datos entre computadoras y dispositivos dentro de la misma red. Las LAN permiten compartir archivos, impresoras y acceso a Internet de manera eficiente y rápida.</p>
       </div><!-- End Section Title -->
 
       <!-- Video sobre Red LAN -->
       <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <video width="500" height="300" controls autoplay>
-          <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4"video/mp4">
+        <video width="500" height="300"  controls autoplay muted>
+          <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4" type="video/mp4">
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
@@ -242,11 +225,10 @@
               <div class="card-body">
                 <div class="card-face card-front">
                   <i class="bi bi-lightning-charge text-warning"></i>
-                  <h5 class="card-title">Conexión rápida y de bajo costo</h5>
+                  <h5 class="card-title">Alta velocidad y bajo costo</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">Redes LAN ofrecen una alta velocidad de transmisión de datos a un costo
-                    accesible, ideal para pequeñas y medianas empresas.</p>
+                  <p class="card-text">Las redes LAN proporcionan alta velocidad de transmisión de datos a un costo accesible, siendo ideales para hogares y empresas.</p>
                 </div>
               </div>
             </div>
@@ -259,8 +241,7 @@
                   <h5 class="card-title">Fácil administración y mantenimiento</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">La infraestructura de una red LAN es fácil de gestionar y mantener, con
-                    soluciones rápidas y accesibles para resolver problemas.</p>
+                  <p class="card-text">Las LAN son fáciles de gestionar y mantener, permitiendo soluciones rápidas y eficientes para cualquier problema.</p>
                 </div>
               </div>
             </div>
@@ -270,18 +251,38 @@
               <div class="card-body">
                 <div class="card-face card-front">
                   <i class="bi bi-arrow-repeat text-success"></i>
-                  <h5 class="card-title">Escalabilidad para agregar más dispositivos</h5>
+                  <h5 class="card-title">Escalabilidad</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">Las redes LAN permiten agregar más dispositivos conforme crece tu empresa,
-                    asegurando una expansión eficiente y sin complicaciones.</p>
+                  <p class="card-text">Permiten agregar más dispositivos fácilmente a medida que una empresa o red crece, asegurando expansibilidad sin complicaciones.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+  <!-- Título del cuestionario -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Aprende Jugando</h2>
+    <p>Este cuestionario de selección está diseñado para que puedas aprender sobre redes LAN mientras juegas. No importa qué nota saques, lo importante es que obtendrás una explicación por cada pregunta, ya sea que respondas correctamente o no. ¡Diviértete aprendiendo!</p>
+    <!-- Botón para empezar el cuestionario -->
+    <div class="text-center mt-4">
+      <button id="startQuizBtn" class="btn btn-primary">Aprendamos Jugando</button>
+    </div>
+  </div><!-- End Section Title -->
+
+  <!-- Cuestionario escondido por defecto -->
+  <div id="quizFormContainer" class="container" data-aos="fade-up" style="display: none;">
+    <form id="quizForm">
+      <div id="questionContainer"></div> <!-- Contenedor de las preguntas dinámicas -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Validar</button>
+      </div>
+    </form>
+  </div>
+      </div>
     </section>
+
 
 
     <style>
@@ -351,57 +352,87 @@
       });
 
     </script>
+<!-- About Section -->
+<section id="about" class="about section">
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>¿Qué es una Dirección IP y una Máscara de Subred?</h2>
-        <p>Una <strong>dirección IP</strong> es un número único que identifica a cada dispositivo en una red, como una
-          computadora, teléfono o impresora. Es similar a la dirección de una casa, pero en el mundo digital. Por otro
-          lado, la <strong>máscara de subred</strong> es una herramienta que ayuda a dividir una red en partes más
-          pequeñas, permitiendo organizar y gestionar de forma eficiente las conexiones entre los dispositivos.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <video width="100%" controls autoplay muted>
-              <source src="img/Direcciones IP y mascaras de RED..mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="col-lg-8 content">
-            <h2>¿Cómo Funciona una Dirección IP y una Máscara de Subred?</h2>
-            <p class="fst-italic py-3">
-              Las direcciones IP permiten que los dispositivos se encuentren y se comuniquen entre sí dentro de una red.
-              La máscara de subred ayuda a identificar qué parte de la dirección IP es la red y cuál es el dispositivo
-              dentro de esa red.</p>
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>¿Qué es una Dirección IP y su Máscara de Red?</h2>
+    <p>Una <strong>dirección IP</strong> es un número único que identifica a cada dispositivo en una red, como una computadora, teléfono o impresora. Es como una dirección postal para dispositivos en internet o en redes privadas. La <strong>máscara de red</strong>, por otro lado, es una herramienta que ayuda a definir el tamaño de la red y divide las direcciones IP en dos partes: la parte que identifica la red y la parte que identifica al dispositivo dentro de esa red. Juntas, la dirección IP y la máscara de red permiten que los dispositivos se comuniquen correctamente en una red.</p>
+  </div><!-- End Section Title -->
+  <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+    <video width="500" height="300"  controls autoplay muted>
+      <source src="img/Direcciones IP y mascaras de RED..mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>¿Cómo Funciona una Dirección IP y su Máscara de Red?</h2>
+        <p class="fst-italic py-3">
+          La dirección IP permite que los dispositivos se encuentren y se comuniquen entre sí dentro de una red. La máscara de red ayuda a identificar qué parte de la dirección IP corresponde a la red y cuál corresponde al dispositivo dentro de esa red. Así, se pueden gestionar las direcciones de manera más eficiente y evitar conflictos.</p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Dirección IP</strong>: Un número único que identifica a un dispositivo en una red, similar a una dirección de casa en el mundo digital.</li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Máscara de Red</strong>: Es una herramienta que define el tamaño de la red y divide las direcciones IP en dos partes: la parte que corresponde a la red y la parte que identifica el dispositivo dentro de esa red.</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Dirección IP</strong>: `192.168.1.1` es una dirección IP comúnmente utilizada en redes locales.</li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Máscara de Red</strong>: `255.255.255.0`, que indica que los primeros tres octetos corresponden a la red y el último octeto está reservado para los dispositivos dentro de esa red.</li>
+              </ul>
+            </div>
+          </div>          
+        <!-- Contextual text about IP address classes -->
+        <div class="py-4">
+          <h3>¿Qué son las Clases de Direcciones IP?</h3>
+          <p>Las direcciones IP se dividen en clases para organizar las redes de forma eficiente. Estas clases determinan el tamaño de la red y la cantidad de dispositivos que pueden estar conectados a una red. Las clases A, B y C son las más comunes y se utilizan de acuerdo al tamaño de la red y la cantidad de direcciones necesarias. A continuación, explicaremos brevemente cada clase:</p>
+        </div>
+            <!-- Clases de Direcciones IP en una fila -->
             <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Dirección IP</strong>: Un número único que identifica
-                    tu dispositivo en una red, como una dirección de casa.</li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Máscara de Subred</strong>: Una herramienta que
-                    organiza y divide las redes en partes más pequeñas.</li>
-                </ul>
+              <div class="col-md-4">
+                <h4><strong>Clase A</strong></h4>
+                <p>La Clase A es utilizada en redes muy grandes. Su rango de direcciones va desde `1.0.0.0` hasta `127.255.255.255`. Permite tener una gran cantidad de dispositivos dentro de la misma red, siendo ideal para organizaciones y redes globales.</p>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de IP</strong>: `192.168.1.1` es una dirección
-                    IP típica.</li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Máscara de Subred</strong>:
-                    `255.255.255.0`, que indica el tamaño de la red.</li>
-                </ul>
+              <div class="col-md-4">
+                <h4><strong>Clase B</strong></h4>
+                <p>La Clase B es usada en redes medianas, con un rango que va de `128.0.0.0` a `191.255.255.255`. Es adecuada para empresas que necesitan más direcciones IP que las que ofrece la Clase C, pero no tan muchas como en la Clase A.</p>
+              </div>
+              <div class="col-md-4">
+                <h4><strong>Clase C</strong></h4>
+                <p>La Clase C es la más comúnmente utilizada en redes pequeñas, como hogares y pequeñas oficinas. Su rango de direcciones es de `192.0.0.0` a `223.255.255.255`, ideal para redes locales con un número limitado de dispositivos.</p>
+                
+              </div>
+            </div>
+  
+          </div>
+<!-- VIDEO DE EXPLICACION -->
+          <!-- Button to trigger modal -->
+          <div class="text-center mt-4">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+              Ver Explicación
+            </button>
+          </div>
+  
+          <!-- Modal for Video -->
+          <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="videoModalLabel">Explicación de clases Dirección IP</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <video width="100%" controls autoplay muted>
+                    <source src="img/Clases.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                  </video>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
-    </section><!-- /About Section -->
-
+</section><!-- /About Section -->
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section light-background">
 
@@ -628,93 +659,117 @@
     <h2 class="text-3xl font-bold text-blue-800">Guía Detallada de Instalación de Cisco Packet Tracer</h2>
     <p class="text-gray-700 mt-2">Descubre cómo descargar, instalar y configurar Cisco Packet Tracer paso a paso en tu sistema operativo. ¡Comencemos!</p>
   </div>
-
   <!-- Paso 1: Crear una cuenta en Cisco NetAcad con Icono -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="100">
-    <div class="flex items-center mb-4">
-      <img src="img/netacad.png" alt="NetAcad Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 1: Crear una cuenta en Cisco Networking Academy (NetAcad)</h3>
+  <div class="container step-1 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="100">
+    <div class="flex-container-step-1">
+      <div class="text-container-step-1">
+        <h3 class="step-title">Paso 1: Crear una cuenta en Cisco Networking Academy (NetAcad)</h3>
+        <p class="step-description">Antes de descargar Cisco Packet Tracer, necesitas crear una cuenta en NetAcad. Sigue estos pasos:</p>
+        <ol class="step-list">
+          <li>Visita <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.</li>
+          <li>Haz clic en "Sign Up" o "Registrarse".</li>
+          <li>Completa el formulario con tus datos personales.</li>
+          <li>Acepta los términos y condiciones y verifica tu correo.</li>
+        </ol>
+      </div>
+      <div class="image-container-step-1">
+        <img src="img/netacad.png" alt="NetAcad Icon" class="image">
+      </div>
     </div>
-    <p class="text-gray-600">Antes de descargar Cisco Packet Tracer, necesitas crear una cuenta en NetAcad. Sigue estos pasos:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Visita <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</li>
-      <li>Haz clic en "Sign Up" o "Registrarse".</li>
-      <li>Completa el formulario con tus datos personales.</li>
-      <li>Acepta los términos y condiciones y verifica tu correo.</li>
-    </ol>
   </div>
 
   <!-- Paso 2: Descargar Cisco Packet Tracer con icono -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="200">
-    <div class="flex items-center mb-4">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 2: Descargar Cisco Packet Tracer</h3>
-    </div>
-    <p class="text-gray-600">Una vez que tengas tu cuenta NetAcad, sigue estos pasos para descargar Cisco Packet Tracer:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="text-blue-600 underline">Cisco NetAcad</a>.</li>
-      <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
-      <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
-    </ol>
-    <div class="mt-4">
-      <a href="https://www.netacad.com/portal/resources/packet-tracer" target="_blank" class="btn bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-800 transition ease-in-out duration-200">Descargar Cisco Packet Tracer</a>
+  <div class="container step-2 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="200">
+    <div class="flex-container-step-2">
+      <div class="text-container-step-2">
+        <h3 class="step-title">Paso 2: Descargar Cisco Packet Tracer</h3>
+        <p class="step-description">Una vez que tengas tu cuenta NetAcad, sigue estos pasos para descargar Cisco Packet Tracer:</p>
+        <ol class="step-list">
+          <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.</li>
+          <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
+          <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
+        </ol>
+        <div class="mt-4">
+          <a href="https://www.netacad.com/portal/resources/packet-tracer" target="_blank" class="btn bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-800 transition ease-in-out duration-200">Descargar Cisco Packet Tracer</a>
+        </div>
+      </div>
+      <div class="image-container-step-2">
+        <img src="img/DES.png" alt="Download Icon" class="image">
+      </div>
     </div>
   </div>
 
   <!-- Paso 3: Instalación en Windows -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
-    <div class="flex items-center mb-4">
-      <img src="img/windows.png" alt="Windows Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 3: Instalación en Windows</h3>
+  <div class="container step-3 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
+    <div class="flex-container-step-3">
+      <div class="text-container-step-3">
+        <h3 class="step-title"> Instalación en Windows</h3>
+        <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en Windows:</p>
+        <ol class="step-list">
+          <li>Haz doble clic en el archivo <code>.exe</code> descargado.</li>
+          <li>Sigue las instrucciones del asistente de instalación.</li>
+          <li>Acepta los términos de licencia y selecciona la ubicación de instalación.</li>
+          <li>Espera a que finalice la instalación y haz clic en "Finalizar".</li>
+        </ol>
+        <p class="text-sm text-gray-500 mt-2"><b>Nota:</b> Si aparece una advertencia de seguridad, selecciona "Permitir" para continuar.</p>
+      </div>
+      <div class="image-container-step-3">
+        <img src="img/windows.png" alt="Windows Icon" class="image">
+      </div>
     </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Cisco Packet Tracer en Windows:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Haz doble clic en el archivo <code>.exe</code> descargado.</li>
-      <li>Sigue las instrucciones del asistente de instalación.</li>
-      <li>Acepta los términos de licencia y selecciona la ubicación de instalación.</li>
-      <li>Espera a que finalice la instalación y haz clic en "Finalizar".</li>
-    </ol>
-    <p class="text-sm text-gray-500 mt-2"><b>Nota:</b> Si aparece una advertencia de seguridad, selecciona "Permitir" para continuar.</p>
   </div>
 
   <!-- Paso 4: Instalación en macOS -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="400">
-    <div class="flex items-center mb-4">
-      <img src="img/macOs.png" alt="macOS Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 4: Instalación en macOS</h3>
+  <div class="container step-4 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="400">
+    <div class="flex-container-step-4">
+      <div class="text-container-step-4">
+        <h3 class="step-title">Instalación en macOS</h3>
+        <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en macOS:</p>
+        <ol class="step-list">
+          <li>Abre el archivo <code>.dmg</code> descargado y arrastra el ícono a "Aplicaciones".</li>
+          <li>Haz clic derecho en Packet Tracer y selecciona "Abrir".</li>
+          <li>Si ves una advertencia de seguridad, ve a "Preferencias" y selecciona "Abrir de todas formas".</li>
+        </ol>
+      </div>
+      <div class="image-container-step-4">
+        <img src="img/macOs.png" alt="macOS Icon" class="image">
+      </div>
     </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Cisco Packet Tracer en macOS:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Abre el archivo <code>.dmg</code> descargado y arrastra el ícono a "Aplicaciones".</li>
-      <li>Haz clic derecho en Packet Tracer y selecciona "Abrir".</li>
-      <li>Si ves una advertencia de seguridad, ve a "Preferencias" y selecciona "Abrir de todas formas".</li>
-    </ol>
   </div>
 
   <!-- Paso 5: Instalación en Linux -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="500">
-    <div class="flex items-center mb-4">
-      <img src="img/ubuntu.png" alt="Linux Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 5: Instalación en Linux (Ubuntu)</h3>
+  <div class="container step-5 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="500">
+    <div class="flex-container-step-5">
+      <div class="text-container-step-5">
+        <h3 class="step-title">Instalación en Linux (Ubuntu)</h3>
+        <p class="step-description">Sigue estos pasos para instalar Packet Tracer en Linux:</p>
+        <ol class="step-list">
+          <li>Abre la terminal y navega a la carpeta de descargas.</li>
+          <li>Instala el archivo <code>.deb</code> con el comando <code>sudo dpkg -i</code>.</li>
+          <li>Corrige dependencias rotas con <code>sudo apt --fix-broken install</code>.</li>
+        </ol>
+      </div>
+      <div class="image-container-step-5">
+        <img src="img/ubuntu.png" alt="Linux Icon" class="image">
+      </div>
     </div>
-    <p class="text-gray-600">Sigue estos pasos para instalar Packet Tracer en Linux:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Abre la terminal y navega a la carpeta de descargas.</li>
-      <li>Instala el archivo <code>.deb</code> con el comando <code>sudo dpkg -i</code>.</li>
-      <li>Corrige dependencias rotas con <code>sudo apt --fix-broken install</code>.</li>
-    </ol>
   </div>
 
   <!-- Paso 6: Primer Inicio -->
-  <div class="container step my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
-    <div class="flex items-center mb-4">
-      <img src="img/start.jpg" alt="Start Icon" class="w-10 h-10 mr-3">
-      <h3 class="text-2xl font-semibold text-blue-700">Paso 6: Primer Inicio de Cisco Packet Tracer</h3>
+  <div class="container step-6 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
+    <div class="flex-container-step-6">
+      <div class="text-container-step-6">
+        <h3 class="step-title">Paso 3: Primer Inicio de Cisco Packet Tracer</h3>
+        <p class="step-description">Después de la instalación, abre Cisco Packet Tracer y sigue estos pasos:</p>
+        <ol class="step-list">
+          <li>Inicia sesión con tu cuenta de NetAcad.</li>
+          <li>Explora la interfaz y comienza a simular redes.</li>
+        </ol>
+      </div>
+      <div class="image-container-step-6">
+        <img src="img/start.jpg" alt="Start Icon" class="image">
+      </div>
     </div>
-    <p class="text-gray-600">Después de la instalación, abre Cisco Packet Tracer y sigue estos pasos:</p>
-    <ol class="list-decimal ml-6 text-gray-600">
-      <li>Inicia sesión con tu cuenta de NetAcad.</li>
-      <li>Explora la interfaz y comienza a simular redes.</li>
-    </ol>
   </div>
 
   <div class="container download-link" data-aos="fade-up" data-aos-delay="700">
@@ -913,6 +968,7 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 
