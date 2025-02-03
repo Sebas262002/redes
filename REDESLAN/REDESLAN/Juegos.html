@@ -58,6 +58,7 @@
             <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
+    <link href="css/palabras.css" rel="stylesheet">
 
 
 </head>
@@ -118,11 +119,11 @@
         <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
         <div class="dropdown-menu fade-down m-0">
           <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-            class="dropdown-item small-text">Algoritmos</a>
+            class="dropdown-item small-text">I Algoritmos</a>
           <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-            class="dropdown-item small-text">Diagramas</a>
+            class="dropdown-item small-text">II Diagramas</a>
           <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-            class="dropdown-item small-text">Python</a>
+            class="dropdown-item small-text">III Python</a>
         </div>
       </div>
 
@@ -130,10 +131,9 @@
       <div class="nav-item dropdown">
         <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
         <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
-          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
-          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
-
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II Redes Lan</a>
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">III Internet</a>
         </div>
       </div>
 
@@ -149,22 +149,6 @@
             Basic Access</a>
         </div>
       </div>
-
-      </div>
-      <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="#about" class="dropdown-item">Internet</a>
-          <a href="#connections" class="dropdown-item">Tipos de Conexión</a>
-          <a href="#resume" class="dropdown-item">Servicios Relacionados</a>
-          <a href="#portfolio2" class="dropdown-item">Navegadores Web</a>
-          <a href="#testimonials" class="dropdown-item">Protocolos de Red</a>
-          <a href="#contact" class="dropdown-item">Backbone</a>
-        </div>
-      </div>
-
-      <a href="#cuestionarios" class="nav-item nav-link">Cuestionario</a>
-
     </div>
     <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
   </div>
@@ -173,100 +157,163 @@
     
 
 
-<!-- About Section -->
 <section id="about" class="about section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Redes LAN - Juego de Ahorcado</h2>
-    <p>¡Adivina las palabras relacionadas con redes LAN! Trata de adivinar la palabra antes de que se te acaben los intentos.</p>
-  </div><!-- End Section Title -->
-  <ol>
-    <li>¿Qué tipo de topología de red utiliza un solo canal de comunicación compartido por todos los dispositivos conectados?</li>
-    <li>¿Cómo se llama la topología de red que tiene un nodo central al cual están conectados todos los dispositivos?</li>
-  </ol>
-  
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-  
-    <div class="row gy-4 justify-content-center">
-      <div class="col-lg-4">
-        <img src="assets/img/portfolio/ahorcado.png" class="img-fluid" alt="">
-      </div>
-      <div class="col-lg-8 content">
-        <h2>Juego del Ahorcado</h2>
-        <p class="fst-italic py-3">
-          Adivina las palabras relacionadas con redes LAN. ¡Buena suerte!
-        </p>
-  
-        <!-- Ahorcado Game -->
-        <div id="game">
-          <p>Palabra: <span id="word"></span></p>
-          <p>Intentos restantes: <span id="tries"></span></p>
-          <p>Adivina una letra:</p>
-          <input type="text" id="letter" maxlength="1" />
-          <button onclick="guessLetter()">Adivinar</button>
-  
-          <p>Intentos fallidos: <span id="failed"></span></p>
-          <p id="message"></p>
-          <button onclick="newGame()">Nuevo Juego</button>
-        </div>
-  
-      </div>
-    </div>
-  
+  <div class="container1 section-title">
+      <h2>Redes LAN - Juego de Ahorcado</h2>
+      <p>¡Adivina las palabras relacionadas con redes LAN antes de que se complete el ahorcado!</p>
   </div>
-  
-</section><!-- /About Section -->
+
+  <div class="container">
+      <div class="row">
+          <div class="col ahorcado">
+              <canvas id="hangmanCanvas" width="200" height="250"></canvas>
+          </div>
+          <div class="col content">
+              <h3 id="question"></h3>
+              <p>Palabra: <span id="wordDisplay"></span></p>
+              <p>Intentos restantes: <span id="tries">6</span></p>
+              <p>Intentos fallidos: <span id="failed"></span></p>
+
+              <input type="text" id="letterInput" maxlength="1">
+              <button onclick="guessLetter()">Adivinar</button>
+              <p id="message"></p>
+              <button onclick="newGame()">Nuevo Juego</button>
+          </div>
+      </div>
+  </div>
+</section>
 
 <script>
-  const words = ["switch", "router"];  // Solo dos palabras
-  let selectedWord, triesLeft, guessedLetters, failedLetters;
+ const words = [
+    { question: "¿Qué tipo de topología de red utiliza un solo canal de comunicación compartido?", word: "bus" },
+    { question: "¿Cómo se llama la topología de red que tiene un nodo central?", word: "estrella" }
+];
 
-  function startGame() {
-    selectedWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
-    triesLeft = 8;
-    guessedLetters = [];
-    failedLetters = [];
-    document.getElementById("word").textContent = getDisplayWord(selectedWord);
-    document.getElementById("tries").textContent = triesLeft;
-    document.getElementById("failed").textContent = failedLetters.join(", ");
-    document.getElementById("message").textContent = "";
-  }
+let selectedWord = "";
+let displayedWord = [];
+let failedAttempts = [];
+let remainingTries = 6;
+let currentQuestion = "";
 
-  function guessLetter() {
-    const letter = document.getElementById("letter").value.toUpperCase();
-    if (!letter || letter.length !== 1 || guessedLetters.includes(letter)) {
-      return;
+const wordDisplay = document.getElementById("wordDisplay");
+const triesDisplay = document.getElementById("tries");
+const failedDisplay = document.getElementById("failed");
+const messageDisplay = document.getElementById("message");
+const questionDisplay = document.getElementById("question");
+const canvas = document.getElementById("hangmanCanvas");
+const ctx = canvas.getContext("2d");
+
+function newGame() {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    selectedWord = words[randomIndex].word.toUpperCase();
+    currentQuestion = words[randomIndex].question;
+    displayedWord = Array(selectedWord.length).fill("_");
+    failedAttempts = [];
+    remainingTries = 6;
+
+    wordDisplay.textContent = displayedWord.join(" ");
+    triesDisplay.textContent = remainingTries;
+    failedDisplay.textContent = "";
+    messageDisplay.textContent = "";
+    questionDisplay.textContent = currentQuestion;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function guessLetter() {
+    let letter = document.getElementById("letterInput").value.toUpperCase();
+    document.getElementById("letterInput").value = "";
+
+    if (!letter.match(/[A-ZÑ]/) || letter.length !== 1) {
+        messageDisplay.textContent = "Ingresa una letra válida.";
+        return;
     }
 
-    guessedLetters.push(letter);
+    if (displayedWord.includes(letter) || failedAttempts.includes(letter)) {
+        messageDisplay.textContent = "Ya usaste esta letra.";
+        return;
+    }
+
     if (selectedWord.includes(letter)) {
-      document.getElementById("word").textContent = getDisplayWord(selectedWord);
-      if (!getDisplayWord(selectedWord).includes("_")) {
-        document.getElementById("message").textContent = "¡Ganaste! La palabra era: " + selectedWord;
-      }
+        for (let i = 0; i < selectedWord.length; i++) {
+            if (selectedWord[i] === letter) {
+                displayedWord[i] = letter;
+            }
+        }
     } else {
-      failedLetters.push(letter);
-      triesLeft--;
-      document.getElementById("tries").textContent = triesLeft;
-      document.getElementById("failed").textContent = failedLetters.join(", ");
-      if (triesLeft === 0) {
-        document.getElementById("message").textContent = "Perdiste. La palabra era: " + selectedWord;
-      }
+        failedAttempts.push(letter);
+        remainingTries--;
+        drawHangman(6 - remainingTries);
     }
-    document.getElementById("letter").value = "";
-  }
 
-  function getDisplayWord(word) {
-    return word.split("").map(letter => (guessedLetters.includes(letter) ? letter : "_")).join(" ");
-  }
+    wordDisplay.textContent = displayedWord.join(" ");
+    triesDisplay.textContent = remainingTries;
+    failedDisplay.textContent = failedAttempts.join(", ");
 
-  function newGame() {
-    startGame();
-  }
+    if (!displayedWord.includes("_")) {
+        messageDisplay.textContent = "¡Ganaste! La palabra era " + selectedWord;
+    } else if (remainingTries === 0) {
+        messageDisplay.textContent = "Perdiste. La palabra era " + selectedWord;
+    }
+}
 
-  // Start the first game
-  startGame();
+function drawHangman(step) {
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "#000";
+
+    switch (step) {
+        case 1:
+            ctx.beginPath();
+            ctx.moveTo(10, 240);
+            ctx.lineTo(190, 240);
+            ctx.stroke();
+            break;
+        case 2:
+            ctx.beginPath();
+            ctx.moveTo(100, 240);
+            ctx.lineTo(100, 20);
+            ctx.stroke();
+            break;
+        case 3:
+            ctx.beginPath();
+            ctx.moveTo(100, 20);
+            ctx.lineTo(150, 20);
+            ctx.stroke();
+            break;
+        case 4:
+            ctx.beginPath();
+            ctx.moveTo(150, 20);
+            ctx.lineTo(150, 50);
+            ctx.stroke();
+            break;
+        case 5:
+            ctx.beginPath();
+            ctx.arc(150, 70, 20, 0, Math.PI * 2);
+            ctx.stroke();
+            break;
+        case 6:
+            ctx.beginPath();
+            ctx.moveTo(150, 90);
+            ctx.lineTo(150, 150);
+            ctx.stroke();
+            ctx.moveTo(150, 110);
+            ctx.lineTo(130, 130);
+            ctx.stroke();
+            ctx.moveTo(150, 110);
+            ctx.lineTo(170, 130);
+            ctx.stroke();
+            ctx.moveTo(150, 150);
+            ctx.lineTo(130, 180);
+            ctx.stroke();
+            ctx.moveTo(150, 150);
+            ctx.lineTo(170, 180);
+            ctx.stroke();
+            break;
+    }
+}
+
+newGame();
+
 </script>
 
 
