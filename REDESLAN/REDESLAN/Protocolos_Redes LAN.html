@@ -63,6 +63,8 @@
   <link href="css/style.css" rel="stylesheet">
 
 
+  <!-- Template Stylesheet -->
+  <link href="./css/protocolos.css" rel="stylesheet">
 
 </head>
 
@@ -119,11 +121,11 @@
         <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
         <div class="dropdown-menu fade-down m-0">
           <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-            class="dropdown-item small-text">Algoritmos</a>
+            class="dropdown-item small-text">I Algoritmos</a>
           <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-            class="dropdown-item small-text">Diagramas</a>
+            class="dropdown-item small-text">II Diagramas</a>
           <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-            class="dropdown-item small-text">Python</a>
+            class="dropdown-item small-text">III Python</a>
         </div>
       </div>
 
@@ -131,10 +133,9 @@
       <div class="nav-item dropdown">
         <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
         <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">Internet</a>
-          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">Medios de conexión</a>
-          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">Redes Lan</a>
-
+          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I Medios de conexión</a>
+          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II Redes Lan</a>
+          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">III Internet</a>
         </div>
       </div>
 
@@ -150,16 +151,12 @@
             Basic Access</a>
         </div>
       </div>
-
-      </div>
     </div>
     <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
   </div>
 </nav>
 <!-- Navbar End -->
-
-
-
+    
 <!-- Protocolos de Redes LAN Section -->
 <section id="protocolos-lan" class="protocolos-lan section bg-light pt-5 pb-5">
 
@@ -328,102 +325,103 @@
 <section id="quiz" class="quiz section light-background" style="background-color:aquamarine">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Cuestionario: Adivina el Protocolo de Red</h2>
-    <p>Te daremos una descripción de un protocolo de red. ¡Adivina cuál es! Si respondes incorrectamente, deberás intentarlo nuevamente.</p>
+    <h2>Cuestionario: Protocolos de Redes LAN</h2>
+    <p>Selecciona la opción correcta para cada pregunta sobre protocolos de redes LAN.</p>
   </div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container1" data-aos="fade-up" data-aos-delay="100">
     <div id="quizContainer">
       <div class="container">
-        <h1>Adivina el Protocolo de Red</h1>
-        <p class="description">Te daremos una descripción de un protocolo de red. ¡Adivina cuál es!</p>
-
-        <p id="protocol-description"></p>
-
-        <input type="text" id="user-answer" placeholder="Escribe tu respuesta aquí...">
-        <button onclick="checkAnswer()">Adivinar</button>
-
-        <p class="result" id="result"></p>
-      </div>
-
-      <!-- Resultado Final -->
-      <div id="finalResult" style="display: none; margin-top: 20px;">
-        <h3>¡Felicidades! Completaste el juego.</h3>
-        <p>Tu calificación final es: <span id="score">0</span>/5.</p>
+        <h1>Protocolos de Redes LAN</h1>
+        
+        <form id="quizForm">
+          <div class="question">
+            <p>1. ¿Cuál es el protocolo más utilizado en redes LAN cableadas?</p>
+            <label><input type="radio" name="q1" value="Ethernet"> Ethernet</label>
+            <label><input type="radio" name="q1" value="Wi-Fi"> Wi-Fi</label>
+            <label><input type="radio" name="q1" value="TCP/IP"> TCP/IP</label>
+          </div>
+          
+          <div class="question">
+            <p>2. ¿Qué protocolo se usa para asignar direcciones IP dinámicamente en una LAN?</p>
+            <label><input type="radio" name="q2" value="DNS"> DNS</label>
+            <label><input type="radio" name="q2" value="DHCP"> DHCP</label>
+            <label><input type="radio" name="q2" value="ARP"> ARP</label>
+          </div>
+          
+          <div class="question">
+            <p>3. ¿Qué protocolo traduce nombres de dominio en direcciones IP?</p>
+            <label><input type="radio" name="q3" value="TCP"> TCP</label>
+            <label><input type="radio" name="q3" value="DNS"> DNS</label>
+            <label><input type="radio" name="q3" value="SNMP"> SNMP</label>
+          </div>
+          
+          <div class="question">
+            <p>4. ¿Cuál de estos protocolos se usa para gestionar y monitorear dispositivos de red?</p>
+            <label><input type="radio" name="q4" value="SNMP"> SNMP</label>
+            <label><input type="radio" name="q4" value="ICMP"> ICMP</label>
+            <label><input type="radio" name="q4" value="FTP"> FTP</label>
+          </div>
+          
+          <div class="question">
+            <p>5. ¿Qué protocolo permite la comunicación inalámbrica en redes LAN?</p>
+            <label><input type="radio" name="q5" value="Wi-Fi"> Wi-Fi</label>
+            <label><input type="radio" name="q5" value="Ethernet"> Ethernet</label>
+            <label><input type="radio" name="q5" value="ARP"> ARP</label>
+          </div>
+          
+          <div class="question">
+            <p>6. ¿Qué protocolo se usa para mapear direcciones IP a direcciones MAC?</p>
+            <label><input type="radio" name="q6" value="ARP"> ARP</label>
+            <label><input type="radio" name="q6" value="DHCP"> DHCP</label>
+            <label><input type="radio" name="q6" value="TCP/IP"> TCP/IP</label>
+          </div>
+        </form>
+        
+        <button onclick="checkAnswers()">Ver Resultado</button>
+        <button onclick="resetQuiz()">Reiniciar Cuestionario</button>
+        
+        <!-- Resultado Final -->
+        <div id="finalResult" style="display: none; margin-top: 20px;">
+          <h3>¡Felicidades! Completaste el cuestionario.</h3>
+          <p>Tu calificación final es: <span id="score">0</span>/6.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+
 <script>
-  const protocols = [
-    {
-      description: "Este protocolo se utiliza para la comunicación a través de cables de cobre o fibra óptica en una red LAN.",
-      answer: "Ethernet"
-    },
-    {
-      description: "Este protocolo permite la comunicación inalámbrica en redes LAN mediante ondas de radio.",
-      answer: "Wi-Fi"
-    },
-    {
-      description: "Este protocolo se utiliza para convertir direcciones IP en direcciones MAC dentro de una red local.",
-      answer: "ARP"
-    },
-    {
-      description: "Este protocolo es utilizado para asignar direcciones IP de manera automática a los dispositivos conectados a la red.",
-      answer: "DHCP"
-    },
-    {
-      description: "Este protocolo se utiliza para la resolución de nombres de dominio en direcciones IP, facilitando la navegación web.",
-      answer: "DNS"
-    }
-  ];
+ function checkAnswers() {
+  const answers = {
+    q1: "Ethernet",
+    q2: "Wi-Fi",
+    q3: "TCP/IP",
+    q4: "ARP",
+    q5: "DHCP",
+    q6: "DNS"
+  };
 
-  let currentProtocolIndex = 0;
   let score = 0;
+  let totalQuestions = Object.keys(answers).length;
 
-  // Function to display the description of the current protocol
-  function displayDescription() {
-    const protocol = protocols[currentProtocolIndex];
-    document.getElementById('protocol-description').textContent = protocol.description;
-    document.getElementById('result').textContent = ''; // Clear the result text for new question
-  }
-
-  // Function to check the user's answer
-  function checkAnswer() {
-    const userAnswer = document.getElementById('user-answer').value.trim().toLowerCase();
-    const correctAnswer = protocols[currentProtocolIndex].answer.toLowerCase();
-    const result = document.getElementById('result');
-
-    // Check if the user's answer is correct
-    if (userAnswer === correctAnswer) {
-      result.textContent = "¡Correcto! ¡Bien hecho!";
-      result.className = "result correct";
+  for (let key in answers) {
+    const selected = document.querySelector(`input[name="${key}"]:checked`);
+    if (selected && selected.value === answers[key]) {
       score++;
-    } else {
-      result.textContent = `La respuesta correcta es: ${protocols[currentProtocolIndex].answer}`;
-      result.className = "result incorrect"; // Show the correct answer after wrong attempt
     }
-
-    // Wait before moving to the next question (2 seconds)
-    setTimeout(() => {
-      currentProtocolIndex++; // Move to the next question
-      if (currentProtocolIndex < protocols.length) {
-        displayDescription(); // Show next description
-      } else {
-        // Show the final result after all questions are answered
-        setTimeout(() => {
-          document.getElementById('finalResult').style.display = 'block';
-          document.getElementById('score').textContent = score;
-        }, 1000);
-      }
-    }, 2000); // Wait for 2 seconds before showing the next question
-
-    document.getElementById('user-answer').value = ''; // Clear input field
   }
 
-  // Initial call to display the first protocol description
-  displayDescription();
+  document.getElementById("score").textContent = `${score}/${totalQuestions}`;
+  document.getElementById("finalResult").style.display = "block";
+}
+
+function resetQuiz() {
+  document.getElementById("quizForm").reset();
+  document.getElementById("finalResult").style.display = "none";
+}
+
 </script>
 
 
