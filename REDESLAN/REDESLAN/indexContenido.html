@@ -60,8 +60,8 @@
 
   <!-- Template Stylesheet -->
   <link href="css/style.css" rel="stylesheet">
-   <!-- Cuuestionario 1  -->
-   <link href="css/questions.css" rel="stylesheet">
+  <!-- Cuuestionario 1  -->
+  <link href="css/questions.css" rel="stylesheet">
 
 
 </head>
@@ -90,7 +90,7 @@
         <li><a href="indexContenido.html"><i class="bi bi-gear-fill navicon"></i> ¿Qué es una Red LAN?</a></li>
         <li><a href="Topologia.html"><i class="bi bi-graph-up navicon"></i> Topologías de red LAN</a></li>
         <li><a href="Protocolos_Redes LAN.html"><i class="bi bi-diagram-3 navicon"></i> Protocolos</a></li>
-        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>        
+        <li><a href="seguridad.html"><i class="bi bi-shield-lock navicon"></i> Seguridad</a></li>
         <li><a href="Juegos.html"><i class="bi bi-book-fill navicon"></i> Recursos Educativos</a></li>
         <li><a href="Ejercicio.html"><i class="bi bi-pencil-square navicon"></i>Ejercicio</a></li>
       </ul>
@@ -101,120 +101,90 @@
 
   <main class="main">
 
-    
-<!-- Asistente star -->
 
-<!--Modal  -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+      <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Base de datos</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
 
-<div class="modal fade" id="responseModal" tabindex="-1" aria-labelledby="responseModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-      <div class="modal-content mb-0 ">
-          
-        <div class="container">
-          <div class="row">
-            <div class=" col-xs-11 col-lg-11 col-md-11" ></div>
-            
-            <div class=" col-xs-1 col-lg-1 col-md-1  mt-2 mr-6">
-              <button type="button" class="btn-close mr-5" data-bs-dismiss="modal" aria-label="Close"></button>  
+
+          <!-- Menú Programación -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item  nav-link dropdown-toggle small-text"
+              data-bs-toggle="dropdown">Programación</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_Programacion/Principal.html" class="dropdown-item small-text">I. Algoritmos</a>
+              <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
+                class="dropdown-item small-text">II. Diagramas</a>
+              <a href="../../Contenido_Programacion/Contenido_Python/Origen.html" class="dropdown-item small-text">III.
+                Python</a>
             </div>
           </div>
 
-          <div class="row">
-            <div class=" col-lg-1 col-md-1 mt-3 pr-0">
-              <img src="assetsBot/robot.png" alt="Icono" class="rounded-circle me-2" style="width: 40px; height: 40px;">
-            </div>
-            <div class=" col-lg-11 col-md-11  pl-0">
-              <div class="modal-body mb-0" id="responseText"></div>
+          <!-- Menú Redes -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I. Medios
+                de
+                conexión</a>
+              <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II. Redes
+                Lan</a>
+              <a href="../../Contenido_Redes/INTERNET-SERVICIOS/INTERNET-SERVICIOS/index.html"
+                class="dropdown-item small-text">III. Internet</a>
+
             </div>
           </div>
-        </div> 
-      </div>
-     
-  </div>
-</div>  
-<!--Moda END -->
 
-<button id="questionButton" class="btn btn-primary " data-aos="fade-up" ></button>
+          <!-- Menú Base de Datos -->
+          <div class="nav-item dropdown">
+            <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de
+              Datos</a>
+            <div class="dropdown-menu fade-down m-0">
+              <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
+                class="dropdown-item small-text">I. Access</a>
+              <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">II.
+                Visual
+                Basic Access</a>
+              <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
+                class="dropdown-item small-text">III. MySQL (Workbench)</a>
 
-<div  id="questionMenu" class="speech-bubble card">
-<ul class="list-group list-group-flush" id="questionList">
-  <!-- Preguntas generadas dinámicamente -->
-</ul>
-</div>
+            </div>
+          </div>
 
-<!-- Asistente end -->
-
-<!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-  <a href="#" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Redes</h2>
-  </a>
-  <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <div class="navbar-nav ms-auto p-4 p-lg-0">
-      <!-- Enlace Inicio 
-      <a href="indexContenido.html" class="nav-item nav-link small-text">Inicio</a>-->  
-
-      <!-- Menú Programación -->
-      <div class="nav-item dropdown">
-        <a href="#" class=" nav-item  nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Programación</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Programacion/Contenido_Programacion/portfolio-details.html"
-            class="dropdown-item small-text">I Algoritmos</a>
-          <a href="../../Contenido_Programacion/Contenido_Diagramas/Introduccion.html"
-            class="dropdown-item small-text">II Diagramas</a>
-          <a href="../../Contenido_Programacion/Contenido_Python/Origen.html"
-            class="dropdown-item small-text">III Python</a>
         </div>
+        <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i
+            class="fa fa-arrow-right ms-3"></i></a>
       </div>
+    </nav>
+    <!-- Navbar End -->
 
-      <!-- Menú Redes -->
-      <div class="nav-item dropdown">
-        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Redes</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_Redes/MEDIOSCONEXION/VANNE/index.html" class="dropdown-item small-text">I Medios de conexión</a>
-          <a href="../../Contenido_Redes/REDESLAN/indexContenido.html" class="dropdown-item small-text">II Redes Lan</a>
-          <a href="../../Contenido_Redes/INTERNET-SERVICIOS/index.html" class="dropdown-item small-text">III Internet</a>
-        </div>
-      </div>
-
-      <!-- Menú Base de Datos -->
-      <div class="nav-item dropdown">
-        <a href="#" class=" nav-item nav-link dropdown-toggle small-text" data-bs-toggle="dropdown">Base de Datos</a>
-        <div class="dropdown-menu fade-down m-0">
-          <a href="../../Contenido_BaseDeDatos/ACCESS_DISEÑO/indexContenido.html"
-            class="dropdown-item small-text">Access</a>
-          <a href="../../Contenido_BaseDeDatos/RDBMS-MYSQL(WORBECH)/indexContenido.html"
-            class="dropdown-item small-text">MySQL (Workbench)</a>
-          <a href="../../Contenido_BaseDeDatos/VB+ACCESS/indexContenido.html" class="dropdown-item small-text">Visual
-            Basic Access</a>
-        </div>
-      </div>
-    </div>
-    <a href="../../indexhome.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Principal<i class="fa fa-arrow-right ms-3"></i></a>
-  </div>
-</nav>
-<!-- Navbar End -->
-    
-
-     <!-- About Section -->
-     <section id="about" class="about section">
+    <!-- About Section -->
+    <section id="about" class="about section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>¿Qué es una Red LAN?</h2>
-        <p>Una Red de Área Local (LAN, por sus siglas en inglés) conecta dispositivos dentro de un área geográfica limitada, como una oficina, edificio o campus. Su objetivo es facilitar la comunicación y el intercambio de datos entre computadoras y dispositivos dentro de la misma red. Las LAN permiten compartir archivos, impresoras y acceso a Internet de manera eficiente y rápida.</p>
+        <p>Una Red de Área Local (LAN, por sus siglas en inglés) conecta dispositivos dentro de un área geográfica
+          limitada, como una oficina, edificio o campus. Su objetivo es facilitar la comunicación y el intercambio de
+          datos entre computadoras y dispositivos dentro de la misma red. Las LAN permiten compartir archivos,
+          impresoras y acceso a Internet de manera eficiente y rápida.</p>
       </div><!-- End Section Title -->
 
       <!-- Video sobre Red LAN -->
       <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-        <video width="500" height="300"  controls autoplay muted>
-          <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4" type="video/mp4">
+        <video width="500" height="300" controls autoplay muted>
+          <source src="img/Que es una Red LAN ó Red de Area Local, Para Que Sirve y Sus Caracteristicas.mp4"
+            type="video/mp4">
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
-      
+
       <!-- Dynamic Content -->
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 align-items-center">
@@ -227,7 +197,8 @@
                   <h5 class="card-title">Alta velocidad y bajo costo</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">Las redes LAN proporcionan alta velocidad de transmisión de datos a un costo accesible, siendo ideales para hogares y empresas.</p>
+                  <p class="card-text">Las redes LAN proporcionan alta velocidad de transmisión de datos a un costo
+                    accesible, siendo ideales para hogares y empresas.</p>
                 </div>
               </div>
             </div>
@@ -240,7 +211,8 @@
                   <h5 class="card-title">Fácil administración y mantenimiento</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">Las LAN son fáciles de gestionar y mantener, permitiendo soluciones rápidas y eficientes para cualquier problema.</p>
+                  <p class="card-text">Las LAN son fáciles de gestionar y mantener, permitiendo soluciones rápidas y
+                    eficientes para cualquier problema.</p>
                 </div>
               </div>
             </div>
@@ -253,34 +225,201 @@
                   <h5 class="card-title">Escalabilidad</h5>
                 </div>
                 <div class="card-face card-back">
-                  <p class="card-text">Permiten agregar más dispositivos fácilmente a medida que una empresa o red crece, asegurando expansibilidad sin complicaciones.</p>
+                  <p class="card-text">Permiten agregar más dispositivos fácilmente a medida que una empresa o red
+                    crece, asegurando expansibilidad sin complicaciones.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  <!-- Título del cuestionario -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Aprende Jugando</h2>
-    <p>Este cuestionario de selección está diseñado para que puedas aprender sobre redes LAN mientras juegas. No importa qué nota saques, lo importante es que obtendrás una explicación por cada pregunta, ya sea que respondas correctamente o no. ¡Diviértete aprendiendo!</p>
-    <!-- Botón para empezar el cuestionario -->
-    <div class="text-center mt-4">
-      <button id="startQuizBtn" class="btn btn-primary">Aprendamos Jugando</button>
-    </div>
-  </div><!-- End Section Title -->
-
-  <!-- Cuestionario escondido por defecto -->
-  <div id="quizFormContainer" class="container" data-aos="fade-up" style="display: none;">
-    <form id="quizForm">
-      <div id="questionContainer"></div> <!-- Contenedor de las preguntas dinámicas -->
-      <div class="text-center mt-4">
-        <button type="submit" class="btn btn-primary">Validar</button>
-      </div>
-    </form>
+      
+<!-- Título del cuestionario -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Aprende Jugando</h2>
+  <p>
+    Este cuestionario de selección está diseñado para que puedas aprender sobre redes LAN mientras juegas. No importa
+    qué nota saques, lo importante es que obtendrás una explicación por cada pregunta, ya sea que respondas
+    correctamente o no. ¡Diviértete aprendiendo!
+  </p>
+  <!-- Botón para empezar el cuestionario -->
+  <div class="text-center mt-4">
+    <button id="startQuizBtn" class="btn btn-primary">Aprendamos Jugando</button>
   </div>
+</div>
+<!-- End Section Title -->
+
+<!-- Cuestionario escondido por defecto -->
+<div id="quizFormContainer" class="container" data-aos="fade-up" style="display: none;">
+  <form id="quizForm">
+    <div id="questionContainer"></div> <!-- Contenedor de las preguntas dinámicas -->
+    <div class="text-center mt-4">
+      <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Siguiente</button>
+      <button id="submitQuizBtn" class="btn btn-success" style="display: none;">Enviar Cuestionario</button>
+      <button id="showAnswersBtn" class="btn btn-info" style="display: none;">Mostrar Respuestas</button>
+    </div>
+  </form>
+</div>
+
+<!-- Modal para mostrar la calificación final -->
+<div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="scoreModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="scoreModalLabel">Calificación Final</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </section>
+      <div class="modal-body" id="finalScoreText"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para mostrar todas las respuestas -->
+<div class="modal fade" id="answersModal" tabindex="-1" aria-labelledby="answersModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="answersModalLabel">Tus Respuestas y las Correctas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="answersList"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Array de preguntas, respuestas, imágenes y videos
+    const qaArray = [
+      {
+        question: "¿Qué es una red LAN?",
+        options: ["Una red que conecta dispositivos en un área local", "Una red que conecta redes de área amplia", "Una red que conecta diferentes continentes", "Una red que no tiene cables"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Cuál es la principal ventaja de una red LAN?",
+        options: ["Compartir recursos como archivos e impresoras", "Conectar a Internet más rápido", "Conectar diferentes redes LAN entre sí", "Permitir acceso a Internet sin restricción"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Qué dispositivos se usan comúnmente en una red LAN?",
+        options: ["Computadoras, switches e impresoras", "Satélites y antenas", "Routers y repetidores", "Ninguna de las anteriores"],
+        correctIndex: 0
+      },
+      {
+        question: "¿Cómo se conecta una red LAN?",
+        options: ["Mediante cables Ethernet o Wi-Fi", "Mediante satélites", "Con cables de fibra óptica siempre", "Con señales de radio"],
+        correctIndex: 0
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    const answers = []; // Array para almacenar las respuestas seleccionadas
+
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const quizFormContainer = document.getElementById('quizFormContainer');
+    const questionContainer = document.getElementById('questionContainer');
+    const finalScoreText = document.getElementById('finalScoreText');
+    const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+    const submitQuizBtn = document.getElementById('submitQuizBtn');
+    const showAnswersBtn = document.getElementById('showAnswersBtn');
+    const answersList = document.getElementById('answersList');
+
+    // Iniciar el cuestionario
+    startQuizBtn.addEventListener('click', function () {
+      startQuizBtn.style.display = 'none';
+      quizFormContainer.style.display = 'block';
+      showQuestion(currentQuestionIndex);
+    });
+
+    // Mostrar pregunta y opciones enumeradas
+    function showQuestion(index) {
+      const currentQA = qaArray[index];
+      questionContainer.innerHTML = `
+        <div class="container section-title">
+          <h2>${currentQA.question}</h2>
+        </div>
+        <ul id="optionList" class="list-group">
+          ${currentQA.options.map((option, i) => `
+            <li class="list-group-item option" data-index="${i}">
+              <input type="radio" name="question${index}" value="${i}"> ${i + 1}. ${option}
+            </li>
+          `).join('')}
+        </ul>
+      `;
+
+      nextQuestionBtn.style.display = index < qaArray.length - 1 ? 'block' : 'none';
+      submitQuizBtn.style.display = index === qaArray.length - 1 ? 'block' : 'none';
+    }
+
+    // Botón Siguiente para pasar a la siguiente pregunta
+    nextQuestionBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      currentQuestionIndex++;
+      showQuestion(currentQuestionIndex);
+    });
+
+    // Enviar el cuestionario y calcular la calificación
+    submitQuizBtn.addEventListener('click', function (event) {
+      event.preventDefault();
+      calculateScore();
+      showAnswersBtn.style.display = 'block'; // Mostrar el botón "Mostrar Respuestas" después de enviar el cuestionario
+    });
+
+    // Calcular la calificación final
+    function calculateScore() {
+      score = 0; // Reiniciar el puntaje
+      qaArray.forEach((qa, index) => {
+        if (answers[index] === qa.correctIndex) {
+          score++;
+        }
+      });
+
+      showFinalScore();
+    }
+
+    // Mostrar la calificación final
+    function showFinalScore() {
+      const totalQuestions = qaArray.length;
+      const percentageScore = (score / totalQuestions) * 100;
+      finalScoreText.innerHTML = `<p>Tu calificación final es ${percentageScore}% (${score} de ${totalQuestions} preguntas correctas).</p>`;
+      const scoreModal = new bootstrap.Modal(document.getElementById('scoreModal'));
+      scoreModal.show();
+    }
+
+    // Capturar la opción seleccionada para cada pregunta
+    document.addEventListener('change', function (event) {
+      if (event.target.matches('input[type="radio"]')) {
+        const questionIndex = parseInt(event.target.name.replace('question', ''), 10);
+        answers[questionIndex] = parseInt(event.target.value, 10);
+      }
+    });
+
+    // Mostrar todas las respuestas seleccionadas y las correctas
+    showAnswersBtn.addEventListener('click', function () {
+      let answersHTML = '<ul>';
+      qaArray.forEach((qa, index) => {
+        const userAnswerIndex = answers[index];
+        const userAnswer = userAnswerIndex !== undefined ? qa.options[userAnswerIndex] : 'No respondida';
+        const correctAnswer = qa.options[qa.correctIndex];
+        const isCorrect = userAnswerIndex === qa.correctIndex ? 'Correcta' : 'Incorrecta';
+        
+        answersHTML += `
+          <li><strong>Pregunta ${index + 1}:</strong> ${qa.question}<br>
+            <strong>Tu respuesta:</strong> ${userAnswer} (${isCorrect})<br>
+            <strong>Respuesta correcta:</strong> ${correctAnswer}
+          </li><br>`;
+      });
+      answersHTML += '</ul>';
+
+      answersList.innerHTML = answersHTML;
+      const answersModal = new bootstrap.Modal(document.getElementById('answersModal'));
+      answersModal.show();
+    });
+  });
+</script>
+
 
 
 
@@ -351,548 +490,584 @@
       });
 
     </script>
-<!-- About Section -->
-<section id="about" class="about section">
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>¿Qué es una Dirección IP y su Máscara de Red?</h2>
-    <p>Una <strong>dirección IP</strong> es un número único que identifica a cada dispositivo en una red, como una computadora, teléfono o impresora. Es como una dirección postal para dispositivos en internet o en redes privadas. La <strong>máscara de red</strong>, por otro lado, es una herramienta que ayuda a definir el tamaño de la red y divide las direcciones IP en dos partes: la parte que identifica la red y la parte que identifica al dispositivo dentro de esa red. Juntas, la dirección IP y la máscara de red permiten que los dispositivos se comuniquen correctamente en una red.</p>
-  </div><!-- End Section Title -->
-  <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
-    <video width="500" height="300"  controls autoplay muted>
-      <source src="img/Direcciones IP y mascaras de RED..mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>¿Qué es una Dirección IP y su Máscara de Red?</h2>
+        <p>Una <strong>dirección IP</strong> es un número único que identifica a cada dispositivo en una red, como una
+          computadora, teléfono o impresora. Es como una dirección postal para dispositivos en internet o en redes
+          privadas. La <strong>máscara de red</strong>, por otro lado, es una herramienta que ayuda a definir el tamaño
+          de la red y divide las direcciones IP en dos partes: la parte que identifica la red y la parte que identifica
+          al dispositivo dentro de esa red. Juntas, la dirección IP y la máscara de red permiten que los dispositivos se
+          comuniquen correctamente en una red.</p>
+      </div><!-- End Section Title -->
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+        <video width="500" height="300" controls autoplay muted>
+          <source src="img/Direcciones IP y mascaras de RED..mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>¿Cómo Funciona una Dirección IP y su Máscara de Red?</h2>
         <p class="fst-italic py-3">
-          La dirección IP permite que los dispositivos se encuentren y se comuniquen entre sí dentro de una red. La máscara de red ayuda a identificar qué parte de la dirección IP corresponde a la red y cuál corresponde al dispositivo dentro de esa red. Así, se pueden gestionar las direcciones de manera más eficiente y evitar conflictos.</p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Dirección IP</strong>: Un número único que identifica a un dispositivo en una red, similar a una dirección de casa en el mundo digital.</li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Máscara de Red</strong>: Es una herramienta que define el tamaño de la red y divide las direcciones IP en dos partes: la parte que corresponde a la red y la parte que identifica el dispositivo dentro de esa red.</li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Dirección IP</strong>: `192.168.1.1` es una dirección IP comúnmente utilizada en redes locales.</li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Máscara de Red</strong>: `255.255.255.0`, que indica que los primeros tres octetos corresponden a la red y el último octeto está reservado para los dispositivos dentro de esa red.</li>
-              </ul>
-            </div>
-          </div>          
+          La dirección IP permite que los dispositivos se encuentren y se comuniquen entre sí dentro de una red. La
+          máscara de red ayuda a identificar qué parte de la dirección IP corresponde a la red y cuál corresponde al
+          dispositivo dentro de esa red. Así, se pueden gestionar las direcciones de manera más eficiente y evitar
+          conflictos.</p>
+        <div class="row">
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Dirección IP</strong>: Un número único que identifica a un
+                dispositivo en una red, similar a una dirección de casa en el mundo digital.</li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Máscara de Red</strong>: Es una herramienta que define el
+                tamaño de la red y divide las direcciones IP en dos partes: la parte que corresponde a la red y la parte
+                que identifica el dispositivo dentro de esa red.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Dirección IP</strong>: `192.168.1.1` es una
+                dirección IP comúnmente utilizada en redes locales.</li>
+              <li><i class="bi bi-chevron-right"></i> <strong>Ejemplo de Máscara de Red</strong>: `255.255.255.0`, que
+                indica que los primeros tres octetos corresponden a la red y el último octeto está reservado para los
+                dispositivos dentro de esa red.</li>
+            </ul>
+          </div>
+        </div>
         <!-- Contextual text about IP address classes -->
         <div class="py-4">
           <h3>¿Qué son las Clases de Direcciones IP?</h3>
-          <p>Las direcciones IP se dividen en clases para organizar las redes de forma eficiente. Estas clases determinan el tamaño de la red y la cantidad de dispositivos que pueden estar conectados a una red. Las clases A, B y C son las más comunes y se utilizan de acuerdo al tamaño de la red y la cantidad de direcciones necesarias. A continuación, explicaremos brevemente cada clase:</p>
+          <p>Las direcciones IP se dividen en clases para organizar las redes de forma eficiente. Estas clases
+            determinan el tamaño de la red y la cantidad de dispositivos que pueden estar conectados a una red. Las
+            clases A, B y C son las más comunes y se utilizan de acuerdo al tamaño de la red y la cantidad de
+            direcciones necesarias. A continuación, explicaremos brevemente cada clase:</p>
         </div>
-            <!-- Clases de Direcciones IP en una fila -->
-            <div class="row">
-              <div class="col-md-4">
-                <h4><strong>Clase A</strong></h4>
-                <p>La Clase A es utilizada en redes muy grandes. Su rango de direcciones va desde `1.0.0.0` hasta `127.255.255.255`. Permite tener una gran cantidad de dispositivos dentro de la misma red, siendo ideal para organizaciones y redes globales.</p>
-              </div>
-              <div class="col-md-4">
-                <h4><strong>Clase B</strong></h4>
-                <p>La Clase B es usada en redes medianas, con un rango que va de `128.0.0.0` a `191.255.255.255`. Es adecuada para empresas que necesitan más direcciones IP que las que ofrece la Clase C, pero no tan muchas como en la Clase A.</p>
-              </div>
-              <div class="col-md-4">
-                <h4><strong>Clase C</strong></h4>
-                <p>La Clase C es la más comúnmente utilizada en redes pequeñas, como hogares y pequeñas oficinas. Su rango de direcciones es de `192.0.0.0` a `223.255.255.255`, ideal para redes locales con un número limitado de dispositivos.</p>
-                
-              </div>
-            </div>
-  
+        <!-- Clases de Direcciones IP en una fila -->
+        <div class="row">
+          <div class="col-md-4">
+            <h4><strong>Clase A</strong></h4>
+            <p>La Clase A es utilizada en redes muy grandes. Su rango de direcciones va desde `1.0.0.0` hasta
+              `127.255.255.255`. Permite tener una gran cantidad de dispositivos dentro de la misma red, siendo ideal
+              para organizaciones y redes globales.</p>
           </div>
-<!-- VIDEO DE EXPLICACION -->
-          <!-- Button to trigger modal -->
-          <div class="text-center mt-4">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
-              Ver Explicación
-            </button>
+          <div class="col-md-4">
+            <h4><strong>Clase B</strong></h4>
+            <p>La Clase B es usada en redes medianas, con un rango que va de `128.0.0.0` a `191.255.255.255`. Es
+              adecuada para empresas que necesitan más direcciones IP que las que ofrece la Clase C, pero no tan muchas
+              como en la Clase A.</p>
           </div>
-  
-          <!-- Modal for Video -->
-          <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="videoModalLabel">Explicación de clases Dirección IP</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <video width="100%" controls autoplay muted>
-                    <source src="img/Clases.mp4" type="video/mp4">
-                    Tu navegador no soporta la reproducción de videos.
-                  </video>
-                </div>
-              </div>
-            </div>
+          <div class="col-md-4">
+            <h4><strong>Clase C</strong></h4>
+            <p>La Clase C es la más comúnmente utilizada en redes pequeñas, como hogares y pequeñas oficinas. Su rango
+              de direcciones es de `192.0.0.0` a `223.255.255.255`, ideal para redes locales con un número limitado de
+              dispositivos.</p>
+
           </div>
         </div>
-</section><!-- /About Section -->
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section light-background">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Componentes de una Red LAN</h2>
-    <p>Explora los componentes esenciales que conforman una red LAN, desde routers hasta switches, firewalls y más. Estos
-      elementos son la columna vertebral de cualquier red eficiente, asegurando seguridad, velocidad y conectividad.</p>
-  </div><!-- End Section Title -->
+      </div>
+      <!-- VIDEO DE EXPLICACION -->
+      <!-- Button to trigger modal -->
+      <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoModal">
+          Ver Explicación
+        </button>
+      </div>
 
-  <div class="container">
-    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-        <li data-filter="*" class="filter-active">Todos</li>
-        <li data-filter=".filter-app">Switchs y Routers</li>
-        <li data-filter=".filter-product">Cables</li>
-        <li data-filter=".filter-branding">Servidores y Dispositivos</li>
-        <li data-filter=".filter-books">Firewalls</li>
-      </ul><!-- End Portfolio Filters -->
-
-      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-        <!-- Portfolio Item 1 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Router 1</h4>
-                <p>Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</p>
-                <a href="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
+      <!-- Modal for Video -->
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="videoModalLabel">Explicación de clases Dirección IP</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls autoplay muted>
+                <source src="img/Clases.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+              </video>
             </div>
           </div>
-        </div><!-- End Portfolio Item -->
+        </div>
+      </div>
+      </div>
+    </section><!-- /About Section -->
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
 
-        <!-- Portfolio Item 2 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/fibra_optica.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Cable-Fibra Optica</h4>
-                <p>Medio de transmisión que utiliza hilos de vidrio o plástico para enviar datos como pulsos de luz.</p>
-                <a href="assets/img/portfolio/fibra_optica.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Componentes de una Red LAN</h2>
+        <p>Explora los componentes esenciales que conforman una red LAN, desde routers hasta switches, firewalls y más.
+          Estos
+          elementos son la columna vertebral de cualquier red eficiente, asegurando seguridad, velocidad y conectividad.
+        </p>
+      </div><!-- End Section Title -->
 
-        <!-- Portfolio Item 3 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/Centros de datos de Google.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Servidor 1</h4>
-                <p>Es una computadora o sistema que ofrece servicios, recursos o datos a otras computadoras (clientes) en una red.</p>
-                <a href="assets/img/portfolio/Centros de datos de Google.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+      <div class="container">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-        <!-- Portfolio Item 4 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="./assets/img/portfolio/firewall2.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Firewall 1</h4>
-                <p>Es un dispositivo de seguridad de red que controla el tráfico de entrada y salida según reglas de seguridad preestablecidas.</p>
-                <a href="./assets/img/portfolio/firewall2.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Todos</li>
+            <li data-filter=".filter-app">Switchs y Routers</li>
+            <li data-filter=".filter-product">Cables</li>
+            <li data-filter=".filter-branding">Servidores y Dispositivos</li>
+            <li data-filter=".filter-books">Firewalls</li>
+          </ul><!-- End Portfolio Filters -->
 
-        <!-- Portfolio Item 5 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/Quiero la wi-fi que funcione bien en toda de la casa.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Router 2</h4>
-                <p>Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</p>
-                <a href="assets/img/portfolio/Quiero la wi-fi que funcione bien en toda de la casa.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <!-- Portfolio Item 6 -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <!-- Portfolio Item 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
                 <div class="image-container">
-                  <img src="img/coaxial.jpg" class="img-fluid" alt="Cable Coaxial">
+                  <img src="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="img-fluid" alt="">
                   <div class="overlay">
-                    <h4>Cable Coaxial</h4>
-                    <p>Es un tipo de cable utilizado para transmitir señales de radiofrecuencia y datos en redes y sistemas de comunicación.</p>
-                    <a href="assets/img/portfolio/coaxial.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <h4>Router 1</h4>
+                    <p>Router de alta calidad para mejorar la conectividad Wi-Fi en grandes áreas.</p>
+                    <a href="assets/img/portfolio/The Best Wi-Fi Routers.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
                   </div>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-        <!-- Portfolio Item 7 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/Rack.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Servidor 2</h4>
-                <p>Puede alojar sitios web, bases de datos, o aplicaciones, y generalmente está optimizado para manejar grandes volúmenes de información.</p>
-                <a href="assets/img/portfolio/Rack.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <!-- Portfolio Item 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/portfolio/fibra_optica.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Cable-Fibra Optica</h4>
+                    <p>Medio de transmisión que utiliza hilos de vidrio o plástico para enviar datos como pulsos de luz.
+                    </p>
+                    <a href="assets/img/portfolio/fibra_optica.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item -->
 
-
-
-        <!-- Portfolio Item 9 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Switch</h4>
-                <p>Es un dispositivo de red que conecta múltiples dispositivos dentro de una red local (LAN).</p>
-                <a href="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <!-- Portfolio Item 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/portfolio/Centros de datos de Google.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Servidor 1</h4>
+                    <p>Es una computadora o sistema que ofrece servicios, recursos o datos a otras computadoras
+                      (clientes) en una red.</p>
+                    <a href="assets/img/portfolio/Centros de datos de Google.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item -->
 
-        <!-- Portfolio Item 10 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/portfolio/ethernet2.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Cable-Ethernet</h4>
-                <p>Transmite datos a través de señales eléctricas. Los cables más comunes son el Cat5e y Cat6.</p>
-                <a href="assets/img/portfolio/ethernet2.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            <!-- Portfolio Item 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="./assets/img/portfolio/firewall2.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Firewall 1</h4>
+                    <p>Es un dispositivo de seguridad de red que controla el tráfico de entrada y salida según reglas de
+                      seguridad preestablecidas.</p>
+                    <a href="./assets/img/portfolio/firewall2.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item -->
 
-        <!-- Portfolio Item 11 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-          <div class="portfolio-content h-100">
-            <div class="image-container">
-              <img src="assets/img/computadoras.jpg" class="img-fluid" alt="">
-              <div class="overlay">
-                <h4>Computadora</h4>
-                <p>Una computadora de red proporciona la capacidad de acceder a la red, gestionar el tráfico de datos y conectarse a servidores y otros dispositivos de la red.</p>
-                <a href="assets/img/computadoras.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+
+
+            <!-- Portfolio Item 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="img/COA.jpg" class="img-fluid" alt="Cable Coaxial">
+                  <div class="overlay">
+                    <h4>Cable Coaxial</h4>
+                    <p>Es un tipo de cable utilizado para transmitir señales de radiofrecuencia y datos en redes y
+                      sistemas de comunicación.</p>
+                    <a href="img/COA.jpg" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+            </div><!-- End Portfolio Item -->
 
-      </div><!-- End Portfolio Items -->
-    </div><!-- End Isotope Layout -->
-  </div><!-- End Container -->
+            <!-- Portfolio Item 7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/portfolio/Rack.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Servidor 2</h4>
+                    <p>Puede alojar sitios web, bases de datos, o aplicaciones, y generalmente está optimizado para
+                      manejar grandes volúmenes de información.</p>
+                    <a href="assets/img/portfolio/Rack.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-</section><!-- End Portfolio Section -->
 
-<style>
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(5, 5, 5, 0.637);
-    color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 20px;
-    text-align: center;
-  }
+            <!-- Portfolio Item 9 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg" class="img-fluid"
+                    alt="">
+                  <div class="overlay">
+                    <h4>Switch</h4>
+                    <p>Es un dispositivo de red que conecta múltiples dispositivos dentro de una red local (LAN).</p>
+                    <a href="assets/img/portfolio/NETGEAR 8 Port Gigabit Ethernet Unmanaged.jpg"
+                      class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-  .image-container:hover .overlay {
-    opacity: 1;
-  }
+            <!-- Portfolio Item 10 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/portfolio/ethernet2.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Cable-Ethernet</h4>
+                    <p>Transmite datos a través de señales eléctricas. Los cables más comunes son el Cat5e y Cat6.</p>
+                    <a href="assets/img/portfolio/ethernet2.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-  .overlay h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #fff;
-  }
+            <!-- Portfolio Item 11 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <div class="portfolio-content h-100">
+                <div class="image-container">
+                  <img src="assets/img/computadoras.jpg" class="img-fluid" alt="">
+                  <div class="overlay">
+                    <h4>Computadora</h4>
+                    <p>Una computadora de red proporciona la capacidad de acceder a la red, gestionar el tráfico de
+                      datos y conectarse a servidores y otros dispositivos de la red.</p>
+                    <a href="assets/img/computadoras.jpg" class="glightbox preview-link"><i
+                        class="bi bi-zoom-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-  .overlay p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
+          </div><!-- End Portfolio Items -->
+        </div><!-- End Isotope Layout -->
+      </div><!-- End Container -->
 
-  .portfolio-info a {
-    font-size: 1.5rem;
-    color: #fff;
-  }
+    </section><!-- End Portfolio Section -->
 
-  .portfolio-info a:hover {
-    color: #f39c12;
-  }
-</style>
+    <style>
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(5, 5, 5, 0.637);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .image-container:hover .overlay {
+        opacity: 1;
+      }
+
+      .overlay h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      .overlay p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+      }
+
+      .portfolio-info a {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+
+      .portfolio-info a:hover {
+        color: #f39c12;
+      }
+    </style>
 
 
 
     <!-- Sección de Guía de Instalación Mejorada -->
-<section id="packet-tracer" class="packet-tracer section bg-gray-100 p-6 rounded-lg shadow-lg">
-  <!-- Título de la Sección con Imagen -->
-  <div class="container section-title text-center" data-aos="fade-up">
-    <img src="img/cisco1.png" alt="Logo Cisco" class="mx-auto mb-4 w-24 h-24">
-    <h2 class="text-3xl font-bold text-blue-800">Guía Detallada de Instalación de Cisco Packet Tracer</h2>
-    <p class="text-gray-700 mt-2">Descubre cómo descargar, instalar y configurar Cisco Packet Tracer paso a paso en tu sistema operativo. ¡Comencemos!</p>
-  </div>
-  <!-- Paso 1: Crear una cuenta en Cisco NetAcad con Icono -->
-  <div class="container step-1 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="100">
-    <div class="flex-container-step-1">
-      <div class="text-container-step-1">
-        <h3 class="step-title">Paso 1: Crear una cuenta en Cisco Networking Academy (NetAcad)</h3>
-        <p class="step-description">Antes de descargar Cisco Packet Tracer, necesitas crear una cuenta en NetAcad. Sigue estos pasos:</p>
-        <ol class="step-list">
-          <li>Visita <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.</li>
-          <li>Haz clic en "Sign Up" o "Registrarse".</li>
-          <li>Completa el formulario con tus datos personales.</li>
-          <li>Acepta los términos y condiciones y verifica tu correo.</li>
-        </ol>
+    <section id="packet-tracer" class="packet-tracer section bg-gray-100 p-6 rounded-lg shadow-lg">
+      <!-- Título de la Sección con Imagen -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <img src="img/cisco1.png" alt="Logo Cisco" class="mx-auto mb-4 w-24 h-24">
+        <h2 class="text-3xl font-bold text-blue-800">Guía Detallada de Instalación de Cisco Packet Tracer</h2>
+        <p class="text-gray-700 mt-2">Descubre cómo descargar, instalar y configurar Cisco Packet Tracer paso a paso en
+          tu sistema operativo. ¡Comencemos!</p>
       </div>
-      <div class="image-container-step-1">
-        <img src="img/netacad.png" alt="NetAcad Icon" class="image">
-      </div>
-    </div>
-  </div>
-
-  <!-- Paso 2: Descargar Cisco Packet Tracer con icono -->
-  <div class="container step-2 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="200">
-    <div class="flex-container-step-2">
-      <div class="text-container-step-2">
-        <h3 class="step-title">Paso 2: Descargar Cisco Packet Tracer</h3>
-        <p class="step-description">Una vez que tengas tu cuenta NetAcad, sigue estos pasos para descargar Cisco Packet Tracer:</p>
-        <ol class="step-list">
-          <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.</li>
-          <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
-          <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
-        </ol>
-        <div class="mt-4">
-          <a href="https://www.netacad.com/portal/resources/packet-tracer" target="_blank" class="btn bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-800 transition ease-in-out duration-200">Descargar Cisco Packet Tracer</a>
+      <!-- Paso 1: Crear una cuenta en Cisco NetAcad con Icono -->
+      <div class="container step-1 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex-container-step-1">
+          <div class="text-container-step-1">
+            <h3 class="step-title">Paso 1: Crear una cuenta en Cisco Networking Academy (NetAcad)</h3>
+            <p class="step-description">Antes de descargar Cisco Packet Tracer, necesitas crear una cuenta en NetAcad.
+              Sigue estos pasos:</p>
+            <ol class="step-list">
+              <li>Visita <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.</li>
+              <li>Haz clic en "Sign Up" o "Registrarse".</li>
+              <li>Completa el formulario con tus datos personales.</li>
+              <li>Acepta los términos y condiciones y verifica tu correo.</li>
+            </ol>
+          </div>
+          <div class="image-container-step-1">
+            <img src="img/netacad.png" alt="NetAcad Icon" class="image">
+          </div>
         </div>
       </div>
-      <div class="image-container-step-2">
-        <img src="img/DES.png" alt="Download Icon" class="image">
-      </div>
-    </div>
-  </div>
 
-  <!-- Paso 3: Instalación en Windows -->
-  <div class="container step-3 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
-    <div class="flex-container-step-3">
-      <div class="text-container-step-3">
-        <h3 class="step-title"> Instalación en Windows</h3>
-        <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en Windows:</p>
-        <ol class="step-list">
-          <li>Haz doble clic en el archivo <code>.exe</code> descargado.</li>
-          <li>Sigue las instrucciones del asistente de instalación.</li>
-          <li>Acepta los términos de licencia y selecciona la ubicación de instalación.</li>
-          <li>Espera a que finalice la instalación y haz clic en "Finalizar".</li>
-        </ol>
-        <p class="text-sm text-gray-500 mt-2"><b>Nota:</b> Si aparece una advertencia de seguridad, selecciona "Permitir" para continuar.</p>
-      </div>
-      <div class="image-container-step-3">
-        <img src="img/windows.png" alt="Windows Icon" class="image">
-      </div>
-    </div>
-  </div>
-
-  <!-- Paso 4: Instalación en macOS -->
-  <div class="container step-4 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="400">
-    <div class="flex-container-step-4">
-      <div class="text-container-step-4">
-        <h3 class="step-title">Instalación en macOS</h3>
-        <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en macOS:</p>
-        <ol class="step-list">
-          <li>Abre el archivo <code>.dmg</code> descargado y arrastra el ícono a "Aplicaciones".</li>
-          <li>Haz clic derecho en Packet Tracer y selecciona "Abrir".</li>
-          <li>Si ves una advertencia de seguridad, ve a "Preferencias" y selecciona "Abrir de todas formas".</li>
-        </ol>
-      </div>
-      <div class="image-container-step-4">
-        <img src="img/macOs.png" alt="macOS Icon" class="image">
-      </div>
-    </div>
-  </div>
-
-  <!-- Paso 5: Instalación en Linux -->
-  <div class="container step-5 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="500">
-    <div class="flex-container-step-5">
-      <div class="text-container-step-5">
-        <h3 class="step-title">Instalación en Linux (Ubuntu)</h3>
-        <p class="step-description">Sigue estos pasos para instalar Packet Tracer en Linux:</p>
-        <ol class="step-list">
-          <li>Abre la terminal y navega a la carpeta de descargas.</li>
-          <li>Instala el archivo <code>.deb</code> con el comando <code>sudo dpkg -i</code>.</li>
-          <li>Corrige dependencias rotas con <code>sudo apt --fix-broken install</code>.</li>
-        </ol>
-      </div>
-      <div class="image-container-step-5">
-        <img src="img/ubuntu.png" alt="Linux Icon" class="image">
-      </div>
-    </div>
-  </div>
-
-  <!-- Paso 6: Primer Inicio -->
-  <div class="container step-6 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
-    <div class="flex-container-step-6">
-      <div class="text-container-step-6">
-        <h3 class="step-title">Paso 3: Primer Inicio de Cisco Packet Tracer</h3>
-        <p class="step-description">Después de la instalación, abre Cisco Packet Tracer y sigue estos pasos:</p>
-        <ol class="step-list">
-          <li>Inicia sesión con tu cuenta de NetAcad.</li>
-          <li>Explora la interfaz y comienza a simular redes.</li>
-        </ol>
-      </div>
-      <div class="image-container-step-6">
-        <img src="img/start.jpg" alt="Start Icon" class="image">
-      </div>
-    </div>
-  </div>
-
-  <div class="container download-link" data-aos="fade-up" data-aos-delay="700">
-    <h4>Descarga Cisco Packet Tracer</h4>
-    <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL" target="_blank" class="btn btn-primary">Descargar Cisco Packet Tracer</a>
-  </div>
-</section>
-<!-- Services Section -->
-<section id="services" class="services section" style="position: relative;">
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Ejemplo en Cisco Packet Tracer</h2>
-    <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
-      opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
-    <p><strong>DESARROLLO</strong></p>
-    <p><strong>IP del router:</strong> 192.168.1.0</p>
-    <p><strong>IP PC0:</strong> 192.168.1.2</p>
-    <p><strong>IP PC1:</strong> 192.168.1.3</p>
-
-    <!-- Botón para mostrar/ocultar el video -->
-    <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
-
-    <!-- Contenedor del video oculto por defecto -->
-    <div id="videoContainer" style="display: none; margin-top: 10px;">
-      <video width="600" controls>
-        <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-      </video>
-    </div>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div>
-          <h4 class="title"><a class="stretched-link">Componentes</a></h4>
-          <img src="./img/corre.png" alt="Alta Velocidad" class="img-fluid service-img">
+      <!-- Paso 2: Descargar Cisco Packet Tracer con icono -->
+      <div class="container step-2 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex-container-step-2">
+          <div class="text-container-step-2">
+            <h3 class="step-title">Paso 2: Descargar Cisco Packet Tracer</h3>
+            <p class="step-description">Una vez que tengas tu cuenta NetAcad, sigue estos pasos para descargar Cisco
+              Packet Tracer:</p>
+            <ol class="step-list">
+              <li>Inicia sesión en <a href="https://www.netacad.com" target="_blank" class="link">Cisco NetAcad</a>.
+              </li>
+              <li>Navega a "Recursos" y selecciona "Packet Tracer".</li>
+              <li>Descarga la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
+            </ol>
+            <div class="mt-4">
+              <a href="https://www.netacad.com/portal/resources/packet-tracer" target="_blank"
+                class="btn bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:bg-blue-800 transition ease-in-out duration-200">Descargar
+                Cisco Packet Tracer</a>
+            </div>
+          </div>
+          <div class="image-container-step-2">
+            <img src="img/DES.png" alt="Download Icon" class="image">
+          </div>
         </div>
-      </div><!-- End Service Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <h4 class="title"><a class="stretched-link">Esquema</a></h4>
-          <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
+      <!-- Paso 3: Instalación en Windows -->
+      <div class="container step-3 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex-container-step-3">
+          <div class="text-container-step-3">
+            <h3 class="step-title"> Instalación en Windows</h3>
+            <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en Windows:</p>
+            <ol class="step-list">
+              <li>Haz doble clic en el archivo <code>.exe</code> descargado.</li>
+              <li>Sigue las instrucciones del asistente de instalación.</li>
+              <li>Acepta los términos de licencia y selecciona la ubicación de instalación.</li>
+              <li>Espera a que finalice la instalación y haz clic en "Finalizar".</li>
+            </ol>
+            <p class="text-sm text-gray-500 mt-2"><b>Nota:</b> Si aparece una advertencia de seguridad, selecciona
+              "Permitir" para continuar.</p>
+          </div>
+          <div class="image-container-step-3">
+            <img src="img/windows.png" alt="Windows Icon" class="image">
+          </div>
         </div>
-      </div><!-- End Service Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div>
-          <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
-          <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
+      <!-- Paso 4: Instalación en macOS -->
+      <div class="container step-4 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex-container-step-4">
+          <div class="text-container-step-4">
+            <h3 class="step-title">Instalación en macOS</h3>
+            <p class="step-description">Sigue estos pasos para instalar Cisco Packet Tracer en macOS:</p>
+            <ol class="step-list">
+              <li>Abre el archivo <code>.dmg</code> descargado y arrastra el ícono a "Aplicaciones".</li>
+              <li>Haz clic derecho en Packet Tracer y selecciona "Abrir".</li>
+              <li>Si ves una advertencia de seguridad, ve a "Preferencias" y selecciona "Abrir de todas formas".</li>
+            </ol>
+          </div>
+          <div class="image-container-step-4">
+            <img src="img/macOs.png" alt="macOS Icon" class="image">
+          </div>
         </div>
-      </div><!-- End Service Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
-          <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
+      <!-- Paso 5: Instalación en Linux -->
+      <div class="container step-5 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="500">
+        <div class="flex-container-step-5">
+          <div class="text-container-step-5">
+            <h3 class="step-title">Instalación en Linux (Ubuntu)</h3>
+            <p class="step-description">Sigue estos pasos para instalar Packet Tracer en Linux:</p>
+            <ol class="step-list">
+              <li>Abre la terminal y navega a la carpeta de descargas.</li>
+              <li>Instala el archivo <code>.deb</code> con el comando <code>sudo dpkg -i</code>.</li>
+              <li>Corrige dependencias rotas con <code>sudo apt --fix-broken install</code>.</li>
+            </ol>
+          </div>
+          <div class="image-container-step-5">
+            <img src="img/ubuntu.png" alt="Linux Icon" class="image">
+          </div>
         </div>
-      </div><!-- End Service Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración del CP0</a></h4>
-          <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
+      <!-- Paso 6: Primer Inicio -->
+      <div class="container step-6 my-8 bg-white p-6 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
+        <div class="flex-container-step-6">
+          <div class="text-container-step-6">
+            <h3 class="step-title">Paso 3: Primer Inicio de Cisco Packet Tracer</h3>
+            <p class="step-description">Después de la instalación, abre Cisco Packet Tracer y sigue estos pasos:</p>
+            <ol class="step-list">
+              <li>Inicia sesión con tu cuenta de NetAcad.</li>
+              <li>Explora la interfaz y comienza a simular redes.</li>
+            </ol>
+          </div>
+          <div class="image-container-step-6">
+            <img src="img/start.jpg" alt="Start Icon" class="image">
+          </div>
         </div>
-      </div><!-- End Service Item -->
+      </div>
 
-      <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-        <div>
-          <h4 class="title"><a class="stretched-link">Configuración del CP1</a></h4>
-          <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
+      <div class="container download-link" data-aos="fade-up" data-aos-delay="700">
+        <h4>Descarga Cisco Packet Tracer</h4>
+        <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL" target="_blank"
+          class="btn btn-primary">Descargar Cisco Packet Tracer</a>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services section" style="position: relative;">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ejemplo en Cisco Packet Tracer</h2>
+        <p>Configurar una red LAN básica que permita la comunicación entre dos computadoras conectadas a un switch y
+          opcionalmente a un router para proporcionar conectividad a internet o a otras redes:</p>
+        <p><strong>DESARROLLO</strong></p>
+        <p><strong>IP del router:</strong> 192.168.1.0</p>
+        <p><strong>IP PC0:</strong> 192.168.1.2</p>
+        <p><strong>IP PC1:</strong> 192.168.1.3</p>
+
+        <!-- Botón para mostrar/ocultar el video -->
+        <button id="toggleVideoBtn" class="btn btn-primary" style="margin-top: 10px;">Procedimiento</button>
+
+        <!-- Contenedor del video oculto por defecto -->
+        <div id="videoContainer" style="display: none; margin-top: 10px;">
+          <video width="600" controls>
+            <source src="img/CREAR una RED  LAN en Packet Tracer _ Configurar RED LAN.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
         </div>
-      </div><!-- End Service Item -->
-    </div>
-  </div>
-</section><!-- /Services Section -->
+      </div><!-- End Section Title -->
 
-<script>
-  document.getElementById('toggleVideoBtn').addEventListener('click', function () {
-    var videoContainer = document.getElementById('videoContainer');
-    if (videoContainer.style.display === 'none') {
-      videoContainer.style.display = 'block';
-    } else {
-      videoContainer.style.display = 'none';
-    }
-  });
-</script>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h4 class="title"><a class="stretched-link">Componentes</a></h4>
+              <img src="./img/corre.png" alt="Alta Velocidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
 
-<style>
-  .service-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-  }
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h4 class="title"><a class="stretched-link">Esquema</a></h4>
+              <img src="./img/Grafica.png" alt="Seguridad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
 
-  .service-item:hover {
-    background-color: #000;
-    color: #fff;
-  }
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h4 class="title"><a class="stretched-link">Comprobación</a></h4>
+              <img src="./img/Comprobacion.png" alt="Fiabilidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
 
-  .service-item:hover .icon i {
-    color: #fff;
-  }
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración de Router</a></h4>
+              <img src="img/ROUTER.png" alt="Alta Velocidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
 
-  .service-item .icon {
-    font-size: 24px;
-    color: #000;
-    margin-right: 15px;
-    transition: color 0.3s ease-in-out;
-  }
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración del PC0</a></h4>
+              <img src="./img/CP0.png" alt="Seguridad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
 
-  .service-item h4 a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <h4 class="title"><a class="stretched-link">Configuración del PC1</a></h4>
+              <img src="./img/CP1.png" alt="Fiabilidad" class="img-fluid service-img">
+            </div>
+          </div><!-- End Service Item -->
+        </div>
+      </div>
+    </section><!-- /Services Section -->
 
-  .service-item:hover h4 a {
-    color: #ffcc00;
-  }
-</style>
+    <script>
+      document.getElementById('toggleVideoBtn').addEventListener('click', function () {
+        var videoContainer = document.getElementById('videoContainer');
+        if (videoContainer.style.display === 'none') {
+          videoContainer.style.display = 'block';
+        } else {
+          videoContainer.style.display = 'none';
+        }
+      });
+    </script>
+
+    <style>
+      .service-item {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .service-item:hover {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .service-item:hover .icon i {
+        color: #fff;
+      }
+
+      .service-item .icon {
+        font-size: 24px;
+        color: #000;
+        margin-right: 15px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .service-item h4 a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .service-item:hover h4 a {
+        color: #ffcc00;
+      }
+    </style>
 
     <!-- Section Content -->
     <div class="container-fluid"
@@ -914,8 +1089,8 @@
         <!-- Texto y Botón -->
         <h2 style="color: white;">¡Bienvenido al Aprendizaje Dinámico!</h2>
         <p>Explora nuevas habilidades de manera interactiva y divertida.</p>
-        <a href="Juegos/Juego1.html"
-          class="btn btn-primary btn-lg" style="font-size: 1.5rem; padding: 1rem 2rem;">¡Empecemos a Aprender!</a>
+        <a href="Juegos/Juego1.html" class="btn btn-primary btn-lg"
+          style="font-size: 1.5rem; padding: 1rem 2rem;">¡Empecemos a Aprender!</a>
       </div>
     </div>
 
@@ -975,76 +1150,76 @@
 
 
 
-<script >
+<script>
 
   document.addEventListener('DOMContentLoaded', function () {
-      // Array de preguntas, respuestas, imágenes y videos
-      const qaArray = [
-          {
-              question: "¿Qué es una red LAN?",
-              response: "Es una red que conecta dispositivos en un área local ",
-              image: "",
-              video: ""
-          },
-          {
-              question: "¿Cuál es la principal ventaja de una red LAN?",
-              response: "Compartir recursos como archivos e impresoras.",
-              image: "",
-              video: ""
-          },
-          {
-              question: "¿Qué dispositivos se usan comúnmente en una red LAN?",
-              response: "Computadoras, switches e impresoras.",
-              image: "",
-              video: ""
-          },
-          {
-              question: "¿Cómo se conecta una red LAN?",
-              response: "Mediante cables Ethernet o Wi-Fi.",
-              image: "",
-              video: ""
-          }
-      ];
-  
-      // Referencias a elementos del DOM
-      const questionList = document.getElementById('questionList');
-      const questionButton = document.getElementById('questionButton');
-      const questionMenu = document.getElementById('questionMenu');
-      const responseText = document.getElementById('responseText');
-  
-      // Generar las preguntas en el menú
-      qaArray.forEach((item, index) => {
-          const listItem = document.createElement('li');
-          listItem.className = 'list-group-item question mb-1 list-group-item-action';
-          listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
-          listItem.setAttribute('data-bs-toggle', 'list');
-          listItem.setAttribute('role', 'tab');
-          listItem.setAttribute('data-index', index);
-          listItem.textContent = item.question;
-          questionList.appendChild(listItem);
-      });
-  
-      // Mostrar/Ocultar el menú
-      questionButton.addEventListener('click', function () {
-          questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
-      });
-  
-      // Delegación de eventos para manejar clics en las preguntas
-      questionList.addEventListener('click', function (event) {
-          if (event.target && event.target.classList.contains('question')) {
-              const index = event.target.getAttribute('data-index');
-              const selectedQA = qaArray[index];
-  
-              let content = `
+    // Array de preguntas, respuestas, imágenes y videos
+    const qaArray = [
+      {
+        question: "¿Qué es una red LAN?",
+        response: "Es una red que conecta dispositivos en un área local ",
+        image: "",
+        video: ""
+      },
+      {
+        question: "¿Cuál es la principal ventaja de una red LAN?",
+        response: "Compartir recursos como archivos e impresoras.",
+        image: "",
+        video: ""
+      },
+      {
+        question: "¿Qué dispositivos se usan comúnmente en una red LAN?",
+        response: "Computadoras, switches e impresoras.",
+        image: "",
+        video: ""
+      },
+      {
+        question: "¿Cómo se conecta una red LAN?",
+        response: "Mediante cables Ethernet o Wi-Fi.",
+        image: "",
+        video: ""
+      }
+    ];
+
+    // Referencias a elementos del DOM
+    const questionList = document.getElementById('questionList');
+    const questionButton = document.getElementById('questionButton');
+    const questionMenu = document.getElementById('questionMenu');
+    const responseText = document.getElementById('responseText');
+
+    // Generar las preguntas en el menú
+    qaArray.forEach((item, index) => {
+      const listItem = document.createElement('li');
+      listItem.className = 'list-group-item question mb-1 list-group-item-action';
+      listItem.style.cssText = 'border: solid 0px #7c2e2e; border-radius: 15px; background-color: #181d38; color: white;';
+      listItem.setAttribute('data-bs-toggle', 'list');
+      listItem.setAttribute('role', 'tab');
+      listItem.setAttribute('data-index', index);
+      listItem.textContent = item.question;
+      questionList.appendChild(listItem);
+    });
+
+    // Mostrar/Ocultar el menú
+    questionButton.addEventListener('click', function () {
+      questionMenu.style.display = questionMenu.style.display === 'none' || questionMenu.style.display === '' ? 'block' : 'none';
+    });
+
+    // Delegación de eventos para manejar clics en las preguntas
+    questionList.addEventListener('click', function (event) {
+      if (event.target && event.target.classList.contains('question')) {
+        const index = event.target.getAttribute('data-index');
+        const selectedQA = qaArray[index];
+
+        let content = `
                   <div class="container section-title" data-aos="fade-up">
                       <h2>${selectedQA.question}</h2>
                       <p>${selectedQA.response}</p>
                   </div>
               `;
-  
-              // Agregar imagen si existe
-              if (selectedQA.image) {
-                  content += `
+
+        // Agregar imagen si existe
+        if (selectedQA.image) {
+          content += `
                       <div class="container">
                           <div class="row mt-3">
                               <div class="col-lg-4 col-md-4"></div>
@@ -1054,11 +1229,11 @@
                           </div>
                       </div>
                   `;
-              }
-  
-              // Agregar video si existe
-              if (selectedQA.video) {
-                  content += `
+        }
+
+        // Agregar video si existe
+        if (selectedQA.video) {
+          content += `
                       <div class="container">
                           <div class="row mt-1">
                               <video controls class="w-100">
@@ -1067,17 +1242,17 @@
                           </div>
                       </div>
                   `;
-              }
-  
-              responseText.innerHTML = content;
-  
-              // Mostrar el modal y ocultar el menú
-              const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
-              responseModal.show();
-              questionMenu.style.display = 'none';
-          }
-      });
+        }
+
+        responseText.innerHTML = content;
+
+        // Mostrar el modal y ocultar el menú
+        const responseModal = new bootstrap.Modal(document.getElementById('responseModal'));
+        responseModal.show();
+        questionMenu.style.display = 'none';
+      }
+    });
   });
-    </script>
-  
+</script>
+
 </html>
